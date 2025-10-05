@@ -11,6 +11,7 @@ import {
   sanitizeDirectoryName,
   parseComposerName
 } from '../utils/path-utils';
+import { COMPOSER_FULL_NAMES, removeDiacritics } from '../utils/composer-names';
 
 export interface PathGenerationOptions {
   basePath: string;
@@ -46,8 +47,8 @@ export function generateModernPath(
   // Main genre folder
   components.push(sanitizeDirectoryName(mainGenre));
 
-  // Subgenre folder (if not empty)
-  if (subgenre && subgenre.trim() !== '') {
+  // Subgenre folder (if not empty and different from main genre)
+  if (subgenre && subgenre.trim() !== '' && subgenre !== mainGenre) {
     components.push(sanitizeDirectoryName(subgenre));
   }
 
@@ -88,17 +89,12 @@ export function generateClassicalPath(
   // For classical: /Classical/Composer, Firstname/Work Category/Work Title/
   const components: string[] = [basePath, 'Classical'];
 
-  // Get composer from classification subgenre first (AI sets this correctly)
-  let composer = classification.subgenre || '';
+  // Get composer (subgenre is work category, not composer!)
+  let composer = metadata.composer || '';
 
-  // If subgenre is generic (like "Opera"), try to extract from album title
-  if (composer === 'Opera' || composer === 'Symphony' || composer === 'Concerto') {
-    composer = extractComposerFromAlbumTitle(metadata.album || '');
-  }
-
-  // Fallback to metadata
+  // Try to extract from album title if not in metadata
   if (!composer || composer.trim() === '') {
-    composer = metadata.composer || '';
+    composer = extractComposerFromAlbumTitle(metadata.album || '');
   }
 
   // Last resort: try albumArtist
@@ -115,8 +111,8 @@ export function generateClassicalPath(
   const composerFormatted = parseComposerName(composer);
   components.push(composerFormatted);
 
-  // Work category (simplified - can be enhanced)
-  const workCategory = detectWorkCategory(metadata.album || metadata.title || '');
+  // Work category: use AI classification first, fallback to detection
+  const workCategory = classification.subgenre || detectWorkCategory(metadata.album || metadata.title || '');
   components.push(sanitizeDirectoryName(workCategory));
 
   // Album/Work title - clean it from composer prefix
@@ -155,12 +151,65 @@ function extractComposerFromAlbumTitle(albumTitle: string): string {
   // Match pattern: "Composer: Work" or "Composer - Work"
   const colonMatch = albumTitle.match(/^([^:]+):/);
   if (colonMatch) {
-    return colonMatch[1].trim();
+    let composer = colonMatch[1].trim();
+
+    // If contains " - ", take the last part (actual composer name)
+    // e.g., "Six Evolutions - Bach: Cello Suites" -> "Bach"
+    if (composer.includes(' - ')) {
+      const parts = composer.split(' - ');
+      composer = parts[parts.length - 1].trim();
+    }
+
+    // Check if first word is a known composer (e.g., "Purcell Edition Volume 1" -> "Purcell")
+    const words = composer.split(/\s+/);
+    if (words.length > 1) {
+      const firstWord = words[0].toLowerCase();
+      const firstWordNormalized = removeDiacritics(firstWord);
+
+      if (COMPOSER_FULL_NAMES[firstWord] || COMPOSER_FULL_NAMES[firstWordNormalized]) {
+        return words[0]; // Return just the composer name
+      }
+
+      // Check first two words (e.g., "Saint Saens Edition")
+      if (words.length >= 2) {
+        const firstTwoWords = `${words[0]} ${words[1]}`.toLowerCase();
+        const firstTwoWordsNormalized = removeDiacritics(firstTwoWords);
+
+        if (COMPOSER_FULL_NAMES[firstTwoWords] || COMPOSER_FULL_NAMES[firstTwoWordsNormalized]) {
+          return `${words[0]} ${words[1]}`;
+        }
+      }
+    }
+
+    return composer;
   }
 
   const dashMatch = albumTitle.match(/^([^-]+)-/);
   if (dashMatch && dashMatch[1].length < 30) { // Avoid matching track separators
     return dashMatch[1].trim();
+  }
+
+  // Try to match known composer names at the start
+  // e.g., "Purcell Dido and Aeneas" -> "Purcell"
+  const words = albumTitle.split(/\s+/);
+  if (words.length >= 2) {
+    // Check if first word(s) match a known composer
+    const firstWord = words[0].toLowerCase().trim();
+    const firstWordNormalized = removeDiacritics(firstWord);
+
+    if (COMPOSER_FULL_NAMES[firstWord] || COMPOSER_FULL_NAMES[firstWordNormalized]) {
+      return words[0]; // Return original capitalization
+    }
+
+    // Check first two words (e.g., "Saint Saens")
+    if (words.length >= 3) {
+      const firstTwoWords = `${words[0]} ${words[1]}`.toLowerCase().trim();
+      const firstTwoWordsNormalized = removeDiacritics(firstTwoWords);
+
+      if (COMPOSER_FULL_NAMES[firstTwoWords] || COMPOSER_FULL_NAMES[firstTwoWordsNormalized]) {
+        return `${words[0]} ${words[1]}`;
+      }
+    }
   }
 
   return '';
@@ -176,6 +225,10 @@ function cleanAlbumTitleFromComposer(albumTitle: string, composer: string): stri
   // Remove "Composer:" prefix
   const colonPattern = new RegExp(`^${escapeRegex(composer)}\\s*:\\s*`, 'i');
   cleaned = cleaned.replace(colonPattern, '');
+
+  // Remove "Something - Composer:" prefix (e.g., "Six Evolutions - Bach:")
+  const dashColonPattern = new RegExp(`^.*\\s-\\s${escapeRegex(composer)}\\s*:\\s*`, 'i');
+  cleaned = cleaned.replace(dashColonPattern, '');
 
   // Remove "Full Name:" prefix (e.g., "Antonio Vivaldi:")
   const parts = composer.split(',').map(p => p.trim());
@@ -194,6 +247,13 @@ function cleanAlbumTitleFromComposer(albumTitle: string, composer: string): stri
   // Generic pattern: remove any "Name Name:" at the start
   // This catches cases like "Antonio Vivaldi:" when composer is just "Vivaldi"
   cleaned = cleaned.replace(/^[A-Z][a-z]+\s+[A-Z][a-z]+\s*:\s*/i, '');
+
+  // Remove composer name without colon (e.g., "Purcell Dido and Aeneas" -> "Dido and Aeneas")
+  if (cleaned === albumTitle) {
+    // Nothing was removed yet, try removing just the composer name at start
+    const composerPattern = new RegExp(`^${escapeRegex(composer)}\\s+`, 'i');
+    cleaned = cleaned.replace(composerPattern, '');
+  }
 
   return cleaned.trim();
 }
@@ -258,7 +318,7 @@ export function detectWorkCategory(text: string): string {
  * Check if metadata has performer information
  */
 function hasPerformerInfo(metadata: FlacMetadata): boolean {
-  return !!(metadata.conductor || metadata.orchestra || metadata.ensemble);
+  return !!(metadata.conductor || metadata.orchestra || metadata.ensemble || metadata.artist);
 }
 
 /**
@@ -281,6 +341,15 @@ function generatePerformerFolder(metadata: FlacMetadata): string {
     parts.push(orchestra);
   } else if (metadata.ensemble) {
     parts.push(metadata.ensemble);
+  } else if (!metadata.conductor) {
+    // For operas/multi-performer works: use albumArtist (usually conductor/orchestra)
+    // This prevents creating separate subfolders for each soloist
+    const performerName = metadata.albumArtist || metadata.artist;
+    if (performerName) {
+      const performerParts = performerName.split(/\s+/);
+      const lastName = performerParts[performerParts.length - 1];
+      parts.push(lastName);
+    }
   }
 
   let folderName = parts.join(' - ');

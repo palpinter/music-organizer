@@ -8,6 +8,7 @@ import { getMusicBrainzClient } from './musicbrainz';
 import { getDiscogsClient } from './discogs';
 import { getAIClassifier } from './ai-classifier';
 import { getCache } from './cache';
+import { getDictionary } from './dictionary';
 import logger from '../utils/logger';
 
 export interface ClassificationOptions {
@@ -59,6 +60,22 @@ export async function classifyAlbum(
       logger.debug(`Cache hit: ${artist} - ${album}`);
       return cached;
     }
+  }
+
+  // Stage 0.5: Check dictionary (artist/composer lookup)
+  const dictionary = getDictionary();
+  const dictionaryResult = await dictionary.lookup(artist, album);
+
+  if (dictionaryResult) {
+    logger.debug(`Dictionary hit: ${artist} - ${album} → ${dictionaryResult.mainGenre}`);
+
+    // Save to cache
+    if (useCache) {
+      const cache = getCache();
+      cache.set(artist, album, dictionaryResult, year);
+    }
+
+    return dictionaryResult;
   }
 
   const results: ClassificationResult[] = [];
@@ -205,11 +222,12 @@ function pickBestResult(results: ClassificationResult[]): ClassificationResult |
 
   const sourceScore = (source: string): number => {
     switch (source) {
+      case 'manual': return 6;
+      case 'dictionary': return 5;
       case 'flac-metadata': return 4;
       case 'musicbrainz': return 3;
       case 'discogs': return 2;
       case 'ai': return 1;
-      case 'manual': return 5;
       default: return 0;
     }
   };

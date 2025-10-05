@@ -4,14 +4,17 @@
 
 export type AlbumType = 'regular' | 'best-of' | 'compilation' | 'soundtrack';
 export type MusicGenre = 'classical' | 'modern';
-export type ClassificationSource = 'flac-metadata' | 'musicbrainz' | 'discogs' | 'ai' | 'manual';
+export type ClassificationSource = 'flac-metadata' | 'musicbrainz' | 'discogs' | 'ai' | 'manual' | 'dictionary';
 export type ConfidenceLevel = 'high' | 'medium' | 'low';
 
 export type MainGenre =
-  | 'Rock & Alternative'
-  | 'Electronic & Dance'
+  | 'Rock'
+  | 'Alternative'
+  | 'Electronic'
+  | 'Dance'
   | 'Urban'
-  | 'Jazz & Blues'
+  | 'Jazz'
+  | 'Blues'
   | 'World & Folk'
   | 'Pop'
   | 'Classical'

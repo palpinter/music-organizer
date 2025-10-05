@@ -2,6 +2,8 @@
  * Path utilities for file system operations
  */
 
+import { normalizeComposerName } from './composer-names';
+
 /**
  * Sanitize a string for use in file/directory names
  * Removes or replaces characters that are problematic in filesystems
@@ -94,9 +96,18 @@ export function formatTrackFilename(
 
 /**
  * Parse composer name and return in "Lastname, Firstname" format
+ * Uses composer-names mapping to convert to full canonical form
  */
 export function parseComposerName(composer: string): string {
   const trimmed = composer.trim();
+
+  // Try to normalize to full canonical form first
+  const normalized = normalizeComposerName(trimmed);
+
+  // If we got a canonical form from the mapping, use it
+  if (normalized !== trimmed) {
+    return sanitizeDirectoryName(normalized);
+  }
 
   // Already in "Lastname, Firstname" format?
   if (trimmed.includes(',')) {

@@ -15,300 +15,139 @@ export interface GenreMapping {
  * Each entry maps raw genre strings to main genre + subgenre
  */
 export const GENRE_MAPPINGS: GenreMapping[] = [
-  // Rock & Alternative - Alternative
+  // Alternative
   {
-    mainGenre: 'Rock & Alternative',
-    subgenre: 'Alternative',
+    mainGenre: 'Alternative',
+    subgenre: '',
     keywords: [
       'alternative', 'alternative rock', 'indie', 'indie rock',
       'post-punk', 'post punk', 'gothic rock', 'gothic', 'goth rock',
       'new wave', 'darkwave', 'dark wave', 'shoegaze',
-      'dream pop', 'ethereal', 'coldwave'
-    ]
-  },
-
-  // Rock & Alternative - Punk
-  {
-    mainGenre: 'Rock & Alternative',
-    subgenre: 'Punk',
-    keywords: [
-      'punk', 'punk rock', 'hardcore', 'hardcore punk',
-      'post-hardcore', 'skate punk', 'street punk',
-      'oi!', 'oi', 'anarcho-punk'
-    ]
-  },
-
-  // Rock & Alternative - Metal
-  {
-    mainGenre: 'Rock & Alternative',
-    subgenre: 'Metal',
-    keywords: [
-      'metal', 'heavy metal', 'death metal', 'black metal',
-      'doom metal', 'doom', 'sludge', 'stoner metal', 'stoner rock',
-      'thrash metal', 'thrash', 'speed metal', 'power metal',
-      'progressive metal', 'metalcore', 'deathcore', 'grindcore'
-    ]
-  },
-
-  // Rock & Alternative - Classic Rock
-  {
-    mainGenre: 'Rock & Alternative',
-    subgenre: 'Classic Rock',
-    keywords: [
-      'classic rock', 'rock', 'hard rock', 'blues rock',
-      'southern rock', 'arena rock', 'album rock',
-      '70s rock', '80s rock', 'rock and roll', 'rock & roll', 'rock n roll'
-    ]
-  },
-
-  // Rock & Alternative - Progressive
-  {
-    mainGenre: 'Rock & Alternative',
-    subgenre: 'Progressive',
-    keywords: [
-      'progressive rock', 'prog rock', 'prog', 'art rock',
-      'psychedelic rock', 'psychedelic', 'space rock',
-      'krautrock', 'experimental rock'
-    ]
-  },
-
-  // Rock & Alternative - Hard Rock
-  {
-    mainGenre: 'Rock & Alternative',
-    subgenre: 'Hard Rock',
-    keywords: [
-      'hard rock', 'glam rock', 'glam metal', 'hair metal',
-      'sleaze rock', 'cock rock'
-    ]
-  },
-
-  // Rock & Alternative - Indie
-  {
-    mainGenre: 'Rock & Alternative',
-    subgenre: 'Indie',
-    keywords: [
+      'dream pop', 'ethereal', 'coldwave',
       'indie pop', 'indie folk', 'chamber pop',
       'lo-fi', 'lo fi', 'bedroom pop', 'jangle pop'
     ]
   },
 
-  // Electronic & Dance - House
+  // Rock
   {
-    mainGenre: 'Electronic & Dance',
-    subgenre: 'House',
+    mainGenre: 'Rock',
+    subgenre: '',
     keywords: [
-      'house', 'deep house', 'tech house', 'progressive house',
-      'electro house', 'acid house', 'chicago house', 'detroit house',
-      'future house', 'bass house'
+      'rock', 'classic rock', 'hard rock', 'blues rock',
+      'southern rock', 'arena rock', 'album rock',
+      '70s rock', '80s rock', 'rock and roll', 'rock & roll', 'rock n roll',
+      'punk', 'punk rock', 'hardcore', 'hardcore punk',
+      'post-hardcore', 'skate punk', 'street punk',
+      'oi!', 'oi', 'anarcho-punk',
+      'metal', 'heavy metal', 'death metal', 'black metal',
+      'doom metal', 'doom', 'sludge', 'stoner metal', 'stoner rock',
+      'thrash metal', 'thrash', 'speed metal', 'power metal',
+      'progressive metal', 'metalcore', 'deathcore', 'grindcore',
+      'progressive rock', 'prog rock', 'prog', 'art rock',
+      'psychedelic rock', 'psychedelic', 'space rock',
+      'krautrock', 'experimental rock',
+      'glam rock', 'glam metal', 'hair metal',
+      'sleaze rock', 'cock rock'
     ]
   },
 
-  // Electronic & Dance - Techno
+  // Electronic
   {
-    mainGenre: 'Electronic & Dance',
-    subgenre: 'Techno',
+    mainGenre: 'Electronic',
+    subgenre: '',
     keywords: [
-      'techno', 'minimal techno', 'detroit techno', 'berlin techno',
-      'hard techno', 'acid techno', 'dub techno'
-    ]
-  },
-
-  // Electronic & Dance - Ambient
-  {
-    mainGenre: 'Electronic & Dance',
-    subgenre: 'Ambient',
-    keywords: [
+      'electronic', 'electronica', 'idm', 'intelligent dance music',
+      'breakbeat', 'breaks', 'glitch', 'downtempo',
+      'trip hop', 'trip-hop', 'chillout', 'chill out',
+      'synthwave', 'vaporwave', 'future bass',
       'ambient', 'dark ambient', 'drone', 'drone ambient',
       'atmospheric', 'soundscape', 'field recording', 'lowercase',
-      'lowercase sound', 'musique concrète', 'concrete music'
-    ]
-  },
-
-  // Electronic & Dance - Industrial
-  {
-    mainGenre: 'Electronic & Dance',
-    subgenre: 'Industrial',
-    keywords: [
+      'lowercase sound', 'musique concrète', 'concrete music',
       'industrial', 'ebm', 'electronic body music', 'power electronics',
       'harsh noise', 'noise', 'industrial techno', 'industrial metal',
       'aggrotech', 'dark electro', 'electro-industrial'
     ]
   },
 
-  // Electronic & Dance - Drum & Bass
+  // Dance
   {
-    mainGenre: 'Electronic & Dance',
-    subgenre: 'Drum & Bass',
+    mainGenre: 'Dance',
+    subgenre: '',
     keywords: [
+      'house', 'deep house', 'tech house', 'progressive house',
+      'electro house', 'acid house', 'chicago house', 'detroit house',
+      'future house', 'bass house',
+      'techno', 'minimal techno', 'detroit techno', 'berlin techno',
+      'hard techno', 'acid techno', 'dub techno',
       'drum and bass', 'drum & bass', 'dnb', 'd&b', 'jungle',
-      'liquid funk', 'neurofunk', 'jump up'
-    ]
-  },
-
-  // Electronic & Dance - Dubstep
-  {
-    mainGenre: 'Electronic & Dance',
-    subgenre: 'Dubstep',
-    keywords: [
+      'liquid funk', 'neurofunk', 'jump up',
       'dubstep', 'brostep', 'post-dubstep', 'future garage',
-      'bass music', 'uk bass'
-    ]
-  },
-
-  // Electronic & Dance - Trance
-  {
-    mainGenre: 'Electronic & Dance',
-    subgenre: 'Trance',
-    keywords: [
+      'bass music', 'uk bass',
       'trance', 'progressive trance', 'uplifting trance',
       'psytrance', 'psychedelic trance', 'goa trance',
       'vocal trance', 'hard trance'
     ]
   },
 
-  // Electronic & Dance - Other Electronic
-  {
-    mainGenre: 'Electronic & Dance',
-    subgenre: 'Electronic',
-    keywords: [
-      'electronic', 'electronica', 'idm', 'intelligent dance music',
-      'breakbeat', 'breaks', 'glitch', 'downtempo',
-      'trip hop', 'trip-hop', 'chillout', 'chill out',
-      'synthwave', 'vaporwave', 'future bass'
-    ]
-  },
-
-  // Urban - Hip-Hop
+  // Urban
   {
     mainGenre: 'Urban',
-    subgenre: 'Hip-Hop',
+    subgenre: '',
     keywords: [
       'hip hop', 'hip-hop', 'rap', 'hip hop/rap',
       'gangsta rap', 'conscious rap', 'alternative hip hop',
       'underground hip hop', 'boom bap', 'east coast hip hop',
-      'west coast hip hop', 'southern hip hop'
-    ]
-  },
-
-  // Urban - Trap
-  {
-    mainGenre: 'Urban',
-    subgenre: 'Trap',
-    keywords: [
-      'trap', 'trap music', 'drill', 'mumble rap'
-    ]
-  },
-
-  // Urban - R&B
-  {
-    mainGenre: 'Urban',
-    subgenre: 'R&B',
-    keywords: [
+      'west coast hip hop', 'southern hip hop',
+      'trap', 'trap music', 'drill', 'mumble rap',
       'r&b', 'r & b', 'rnb', 'rhythm and blues',
-      'contemporary r&b', 'alternative r&b', 'neo-soul'
-    ]
-  },
-
-  // Urban - Soul
-  {
-    mainGenre: 'Urban',
-    subgenre: 'Soul',
-    keywords: [
+      'contemporary r&b', 'alternative r&b', 'neo-soul',
       'soul', 'northern soul', 'southern soul',
-      'motown', 'classic soul', 'deep soul'
-    ]
-  },
-
-  // Urban - Funk
-  {
-    mainGenre: 'Urban',
-    subgenre: 'Funk',
-    keywords: [
+      'motown', 'classic soul', 'deep soul',
       'funk', 'p-funk', 'g-funk', 'funk rock',
       'funk metal', 'electro funk'
     ]
   },
 
-  // Jazz & Blues - Jazz
+  // Jazz
   {
-    mainGenre: 'Jazz & Blues',
-    subgenre: 'Jazz',
+    mainGenre: 'Jazz',
+    subgenre: '',
     keywords: [
       'jazz', 'bebop', 'hard bop', 'cool jazz', 'modal jazz',
       'free jazz', 'avant-garde jazz', 'smooth jazz',
       'contemporary jazz', 'jazz fusion', 'acid jazz',
-      'nu jazz', 'post-bop'
-    ]
-  },
-
-  // Jazz & Blues - Blues
-  {
-    mainGenre: 'Jazz & Blues',
-    subgenre: 'Blues',
-    keywords: [
-      'blues', 'delta blues', 'chicago blues', 'electric blues',
-      'acoustic blues', 'country blues', 'texas blues',
-      'blues rock' // Can be crossover
-    ]
-  },
-
-  // Jazz & Blues - Fusion
-  {
-    mainGenre: 'Jazz & Blues',
-    subgenre: 'Fusion',
-    keywords: [
+      'nu jazz', 'post-bop',
       'fusion', 'jazz-rock', 'jazz rock'
     ]
   },
 
-  // World & Folk - Folk
+  // Blues
+  {
+    mainGenre: 'Blues',
+    subgenre: '',
+    keywords: [
+      'blues', 'delta blues', 'chicago blues', 'electric blues',
+      'acoustic blues', 'country blues', 'texas blues'
+    ]
+  },
+
+  // World & Folk
   {
     mainGenre: 'World & Folk',
-    subgenre: 'Folk',
+    subgenre: '',
     keywords: [
       'folk', 'folk music', 'contemporary folk', 'folk rock',
       'acoustic folk', 'traditional folk', 'american folk',
-      'british folk', 'irish folk', 'scottish folk'
-    ]
-  },
-
-  // World & Folk - World
-  {
-    mainGenre: 'World & Folk',
-    subgenre: 'World',
-    keywords: [
+      'british folk', 'irish folk', 'scottish folk',
       'world', 'world music', 'ethnic', 'traditional',
       'african', 'asian', 'latin', 'middle eastern',
-      'oriental', 'tribal', 'indigenous'
-    ]
-  },
-
-  // World & Folk - Singer-Songwriter
-  {
-    mainGenre: 'World & Folk',
-    subgenre: 'Singer-Songwriter',
-    keywords: [
+      'oriental', 'tribal', 'indigenous',
       'singer-songwriter', 'singer/songwriter', 'songwriter',
-      'acoustic', 'acoustic pop'
-    ]
-  },
-
-  // World & Folk - Country
-  {
-    mainGenre: 'World & Folk',
-    subgenre: 'Country',
-    keywords: [
+      'acoustic', 'acoustic pop',
       'country', 'country music', 'country rock', 'alt-country',
       'alternative country', 'bluegrass', 'americana',
-      'outlaw country', 'honky tonk'
-    ]
-  },
-
-  // World & Folk - Celtic
-  {
-    mainGenre: 'World & Folk',
-    subgenre: 'Celtic',
-    keywords: [
+      'outlaw country', 'honky tonk',
       'celtic', 'celtic music', 'celtic folk'
     ]
   },
@@ -316,7 +155,7 @@ export const GENRE_MAPPINGS: GenreMapping[] = [
   // Pop
   {
     mainGenre: 'Pop',
-    subgenre: 'Pop',
+    subgenre: '',
     keywords: [
       'pop', 'pop music', 'synth-pop', 'synth pop', 'synthpop',
       'electropop', 'electro-pop', 'dance-pop', 'dance pop',
@@ -377,10 +216,13 @@ export function mapGenre(rawGenre: string): { mainGenre: MainGenre; subgenre: st
  */
 export function getAllMainGenres(): MainGenre[] {
   return [
-    'Rock & Alternative',
-    'Electronic & Dance',
+    'Rock',
+    'Alternative',
+    'Electronic',
+    'Dance',
     'Urban',
-    'Jazz & Blues',
+    'Jazz',
+    'Blues',
     'World & Folk',
     'Pop',
     'Classical',

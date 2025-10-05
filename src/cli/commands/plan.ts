@@ -138,7 +138,7 @@ export const planCommand = new Command('plan')
           usePerformerFolders: options.usePerformerFolders
         },
         directories: sortedDirs,
-        fileMoves: fileMoves.slice(0, 1000), // Limit to first 1000 for JSON size
+        fileMoves: fileMoves,
         conflicts: conflictResult.conflicts
       };
 

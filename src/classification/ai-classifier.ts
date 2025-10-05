@@ -34,11 +34,14 @@ export class AIClassifier {
   private buildPrompt(albums: AIClassificationRequest[]): string {
     const genreHierarchy = `
 Genre Hierarchy:
-- Rock & Alternative: [Alternative, Punk, Metal, Classic Rock, Progressive, Hard Rock, Indie]
-- Electronic & Dance: [House, Techno, Ambient, Industrial, Drum & Bass, Dubstep, Trance, Electronic]
-- Urban: [Hip-Hop, R&B, Soul, Funk, Trap]
-- Jazz & Blues: [Jazz, Blues, Bebop, Fusion]
-- World & Folk: [Folk, World, Singer-Songwriter, Country, Celtic]
+- Rock: (no subgenres)
+- Alternative: (no subgenres)
+- Electronic: (no subgenres)
+- Dance: (no subgenres)
+- Urban: (no subgenres)
+- Jazz: (no subgenres)
+- Blues: (no subgenres)
+- World & Folk: (no subgenres)
 - Pop: (no subgenres)
 - Classical: [Opera, Concertos, Symphonies, Chamber Music, Sonatas, Sacred Music, Keyboard Works, Orchestral Works, Other Works]
   IMPORTANT: For Classical, use WORK CATEGORY as subgenre, NEVER use composer name as subgenre!

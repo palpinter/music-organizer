@@ -122,6 +122,7 @@ export const classifyCommand = new Command('classify')
         classified: results.size,
         unclassified: albums.length - results.size,
         bySource: {
+          dictionary: 0,
           flacMetadata: 0,
           musicbrainz: 0,
           discogs: 0,
@@ -177,6 +178,7 @@ export const classifyCommand = new Command('classify')
       console.log(`Unclassified:    ${stats.unclassified}`);
 
       console.log('\n=== By Source ===\n');
+      console.log(`  Dictionary:    ${stats.bySource.dictionary}`);
       console.log(`  Metadata:      ${stats.bySource.flacMetadata}`);
       console.log(`  MusicBrainz:   ${stats.bySource.musicbrainz}`);
       console.log(`  Discogs:       ${stats.bySource.discogs}`);

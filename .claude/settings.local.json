@@ -31,7 +31,22 @@
       "Bash(ls:*)",
       "Bash(metaflac:*)",
       "Bash(xargs metaflac:*)",
-      "Bash(xargs:*)"
+      "Bash(xargs:*)",
+      "Bash(awk:*)",
+      "Bash(LOG_LEVEL=debug node /home/palpinter/Kódtár/aktiv/github-pal-pinter/music-organizer/dist/index.js --help)",
+      "Bash(LOG_LEVEL=info node dist/index.js classify ~/Zenetár/Pop --output test-classify-pop.json)",
+      "Bash(LOG_LEVEL=info node dist/index.js plan ~/Zenetár/Pop --output test-plan-pop.json)",
+      "Bash(LOG_LEVEL=info node dist/index.js classify ~/Zenetár/Pop --output test-classify-pop-fixed.json)",
+      "Bash(LOG_LEVEL=info node dist/index.js plan ~/Zenetár/Pop --output test-plan-pop-fixed.json)",
+      "Bash(LOG_LEVEL=info node dist/index.js plan ~/Zenetár/Klasszikus --output test-plan-classical.json)",
+      "Bash(LOG_LEVEL=info node dist/index.js plan ~/Zenetár/Klasszikus --output test-plan-classical-fixed.json)",
+      "Bash(LOG_LEVEL=warn node dist/index.js plan ~/Zenetár/Klasszikus --output test-plan-classical-fixed.json)",
+      "Bash(LOG_LEVEL=warn node dist/index.js plan ~/Zenetár/Klasszikus --output test-plan-classical-fullnames.json)",
+      "Bash(LOG_LEVEL=warn node dist/index.js plan ~/Zenetár/Opera --output test-plan-opera.json)",
+      "Bash(LOG_LEVEL=warn node dist/index.js plan ~/Zenetár/Opera --output test-plan-opera-fixed.json)",
+      "Bash(export LOG_LEVEL=warn)",
+      "Bash(jq:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

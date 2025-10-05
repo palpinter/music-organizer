@@ -1,0 +1,545 @@
+{
+  "timestamp": "2025-10-05T21:34:02.868Z",
+  "libraryPath": "/home/palpinter/Zenetár/Pop",
+  "statistics": {
+    "total": 84,
+    "classified": 73,
+    "unclassified": 11,
+    "bySource": {
+      "dictionary": 73,
+      "flacMetadata": 0,
+      "musicbrainz": 0,
+      "discogs": 0,
+      "ai": 0,
+      "manual": 0
+    },
+    "byConfidence": {
+      "high": 73,
+      "medium": 0,
+      "low": 0
+    },
+    "byMainGenre": {
+      "Pop": 9,
+      "Urban": 1,
+      "Alternative": 2,
+      "World & Folk": 13,
+      "Jazz": 7,
+      "Rock": 38,
+      "Classical": 2,
+      "Electronic": 1
+    }
+  },
+  "classifications": [
+    {
+      "artist": "Abba",
+      "album": "Abba Gold Anniversary Edition",
+      "mainGenre": "Pop",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Adele",
+      "album": "25",
+      "mainGenre": "Pop",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Adele",
+      "album": "19",
+      "mainGenre": "Pop",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Adele",
+      "album": "21",
+      "mainGenre": "Pop",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Aretha Franklin",
+      "album": "The Atlantic Singles Collection 1967-1970 (Mono Remaster)",
+      "mainGenre": "Urban",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Roxy Music",
+      "album": "Platinum Collection",
+      "mainGenre": "Alternative",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Bryan Ferry",
+      "album": "Platinum Collection",
+      "mainGenre": "Alternative",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Dido",
+      "album": "Greatest Hits",
+      "mainGenre": "Pop",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Enya",
+      "album": "A Day Without Rain",
+      "mainGenre": "World & Folk",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Enya",
+      "album": "Amarantine (Christmas Edition)",
+      "mainGenre": "World & Folk",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Enya",
+      "album": "Shepherd Moons",
+      "mainGenre": "World & Folk",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Enya",
+      "album": "Stars",
+      "mainGenre": "World & Folk",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Enya",
+      "album": "The Celts",
+      "mainGenre": "World & Folk",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Enya",
+      "album": "The Memory of Trees",
+      "mainGenre": "World & Folk",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Enya",
+      "album": "Watermark",
+      "mainGenre": "World & Folk",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Eva Cassidy",
+      "album": "The Best of Eva Cassidy",
+      "mainGenre": "Jazz",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Jennifer Warnes",
+      "album": "Platinum & Gold Collection",
+      "mainGenre": "Pop",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Katie Melua",
+      "album": "Ultimate Collection",
+      "mainGenre": "Pop",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Kelly Clarkson",
+      "album": "Greatest Hits - Chapter One",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Loreena McKennitt",
+      "album": "A Midwinter Night's Dream",
+      "mainGenre": "World & Folk",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Loreena McKennitt",
+      "album": "An Ancient Muse",
+      "mainGenre": "World & Folk",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Loreena McKennitt",
+      "album": "The Book of Secrets",
+      "mainGenre": "World & Folk",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Loreena McKennitt",
+      "album": "The Mask and Mirror",
+      "mainGenre": "World & Folk",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Loreena McKennitt",
+      "album": "The Visit",
+      "mainGenre": "World & Folk",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Phil Collins",
+      "album": "The Singles",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Roxette",
+      "album": "A Collection of Roxette Hits! Their 20 Greatest Songs!",
+      "mainGenre": "Pop",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sade",
+      "album": "Diamond Life",
+      "mainGenre": "Jazz",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sade",
+      "album": "Love Deluxe",
+      "mainGenre": "Jazz",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sade",
+      "album": "Lovers Rock",
+      "mainGenre": "Jazz",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sade",
+      "album": "Promise",
+      "mainGenre": "Jazz",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sade",
+      "album": "Soldier of Love",
+      "mainGenre": "Jazz",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sade",
+      "album": "Stronger Than Pride",
+      "mainGenre": "Jazz",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sarah McLachlan",
+      "album": "The Essential Sarah McLachlan",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sting",
+      "album": "...Nothing Like The Sun",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sting",
+      "album": "57TH & 9TH",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sting",
+      "album": "Brand New Day",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sting",
+      "album": "If On A Winter's Night",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sting",
+      "album": "Mercury Falling",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Chamber Orchestra of Europe, Claudio Abbado",
+      "album": "Prokofiev: Peter and the Wolf; Classical Symphony Op.25; March Op.99; Overture Op.34",
+      "mainGenre": "Classical",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sting",
+      "album": "Sacred Love",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sting",
+      "album": "Ten Summoner's Tales",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sting",
+      "album": "The Best Of 25 Years",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sting",
+      "album": "The Bridge (Deluxe)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sting",
+      "album": "The Dream Of The Blue Turtles",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sting",
+      "album": "The Last Ship",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sting",
+      "album": "The Living Sea",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sting",
+      "album": "The Soul Cages",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Kalichstein-Laredo-Robinson Trio",
+      "album": "In Celebration: The Piano Trios of Stanley Silverman",
+      "mainGenre": "Classical",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Sting, Shaggy, Morgan Heritage, Aidonia",
+      "album": "44/876",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Beatles",
+      "album": "A Hard Day's Night (Remastered)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Beatles",
+      "album": "Abbey Road (Remastered)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Beatles",
+      "album": "Beatles For Sale (Remastered)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Beatles",
+      "album": "Help! (Remastered)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Beatles",
+      "album": "Let It Be (2021 Mix)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Beatles",
+      "album": "Magical Mystery Tour (Remastered)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Beatles",
+      "album": "Please Please Me (Remastered)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Beatles",
+      "album": "Revolver (Remastered)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Beatles",
+      "album": "Rubber Soul (Remastered)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Beatles",
+      "album": "Sgt. Pepper's Lonely Hearts Club Band (Remastered)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Beatles",
+      "album": "The Beatles (Remastered)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Beatles",
+      "album": "With The Beatles (Remastered)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Beatles",
+      "album": "Yellow Submarine (Remastered)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Police",
+      "album": "Ghost In The Machine (Remastered 2003)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Police",
+      "album": "Outlandos D'Amour (Remastered 2003)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Police",
+      "album": "Reggatta De Blanc (Remastered 2003)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Police",
+      "album": "Synchronicity (Remastered 2003)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Police",
+      "album": "Zenyatta Mondatta (Remastered 2003)",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "The Police",
+      "album": "The Police",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Jean-Christophe Groffe, Ziv Braha",
+      "album": "all we get is life",
+      "mainGenre": "Pop",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Tracy Chapman",
+      "album": "Greatest Hits",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Irene Papas, Vangelis",
+      "album": "Odes",
+      "mainGenre": "World & Folk",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Vangelis",
+      "album": "Rapsodies",
+      "mainGenre": "Electronic",
+      "source": "dictionary",
+      "confidence": "high"
+    },
+    {
+      "artist": "Vaya Con Dios",
+      "album": "The Best Of Vaya Con Dios",
+      "mainGenre": "Rock",
+      "source": "dictionary",
+      "confidence": "high"
+    }
+  ]
+}
