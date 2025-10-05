@@ -137,3 +137,11 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Music Organizer specific
+analysis-report.json
+classifications.json
+manual-review.json
+reorganization-plan.json
+.genre-cache.json
+*.log
