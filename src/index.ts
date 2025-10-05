@@ -1,7 +1,15 @@
 #!/usr/bin/env node
 
+import dotenv from 'dotenv';
+import path from 'path';
+import os from 'os';
 import { Command } from 'commander';
+
+// Load .env from config directory
+const configDir = path.join(os.homedir(), '.config', 'music-organizer');
+dotenv.config({ path: path.join(configDir, '.env') });
 import { analyzeCommand } from './cli/commands/analyze';
+import { classifyCommand } from './cli/commands/classify';
 
 const program = new Command();
 
@@ -12,9 +20,9 @@ program
 
 // Add commands
 program.addCommand(analyzeCommand);
+program.addCommand(classifyCommand);
 
 // TODO: Add more commands as they are implemented
-// program.addCommand(classifyCommand);
 // program.addCommand(planCommand);
 // program.addCommand(organizeCommand);
 // program.addCommand(verifyCommand);

@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-10-05T04:12:31.053Z",
+  "libraryPath": "/home/palpinter/Zenék/Klasszikus",
+  "summary": {
+    "totalFiles": 27,
+    "flacFiles": 23,
+    "albums": 1,
+    "errors": 0
+  },
+  "statistics": {
+    "byGenre": {},
+    "byArtist": {
+      "Various Artists": 1
+    },
+    "byYear": {
+      "2003": 1
+    }
+  },
+  "errors": []
+}

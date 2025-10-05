@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-10-05T04:46:46.161Z",
+  "libraryPath": "/home/palpinter/Zenék",
+  "statistics": {
+    "total": 4,
+    "classified": 4,
+    "unclassified": 0,
+    "bySource": {
+      "flacMetadata": 0,
+      "musicbrainz": 0,
+      "discogs": 0,
+      "ai": 4,
+      "manual": 0
+    },
+    "byConfidence": {
+      "high": 4,
+      "medium": 0,
+      "low": 0
+    },
+    "byMainGenre": {
+      "World & Folk": 1,
+      "Classical": 3
+    }
+  },
+  "classifications": [
+    {
+      "artist": "Dead Can Dance",
+      "album": "Into the Labyrinth (Remastered)",
+      "mainGenre": "World & Folk",
+      "subgenre": "World",
+      "source": "ai",
+      "confidence": "high",
+      "reasoning": "Ethereal world music blending medieval, folk, and global influences with tracks like 'Yulunga (Spirit Dance)' and traditional arrangements"
+    },
+    {
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "mainGenre": "Classical",
+      "subgenre": "Vivaldi",
+      "source": "ai",
+      "confidence": "high",
+      "reasoning": "Classical baroque concertos by composer Antonio Vivaldi featuring viola da gamba"
+    },
+    {
+      "artist": "London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "mainGenre": "Classical",
+      "subgenre": "Bizet",
+      "source": "ai",
+      "confidence": "high",
+      "reasoning": "Classical opera by composer Georges Bizet performed by symphony orchestra"
+    },
+    {
+      "artist": "Teresa Berganza, Plácido Domingo, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "mainGenre": "Classical",
+      "subgenre": "Opera",
+      "source": "ai",
+      "confidence": "high",
+      "reasoning": "Classical opera recording of Bizet's Carmen with renowned opera singers and orchestra"
+    }
+  ]
+}

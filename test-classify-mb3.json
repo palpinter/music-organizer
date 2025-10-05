@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-10-05T04:21:19.650Z",
+  "libraryPath": "/home/palpinter/Zenék/Alternative/Dead Can Dance",
+  "statistics": {
+    "total": 1,
+    "classified": 0,
+    "unclassified": 1,
+    "bySource": {
+      "flacMetadata": 0,
+      "musicbrainz": 0,
+      "discogs": 0,
+      "ai": 0,
+      "manual": 0
+    },
+    "byConfidence": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "byMainGenre": {}
+  },
+  "classifications": []
+}

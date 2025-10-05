@@ -5,7 +5,12 @@
       "Bash(npm run build:*)",
       "Bash(chmod:*)",
       "Bash(node:*)",
-      "Bash(npm link:*)"
+      "Bash(npm link:*)",
+      "Read(//home/palpinter/**)",
+      "Bash(npm install:*)",
+      "Bash(LOG_LEVEL=debug node dist/index.js classify ~/Zenék/Alternative/\"Dead Can Dance\" --stages musicbrainz --output test-classify-mb2.json)",
+      "Bash(export LOG_LEVEL=debug)",
+      "Bash(export LOG_LEVEL=info)"
     ],
     "deny": [],
     "ask": []

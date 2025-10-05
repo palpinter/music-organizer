@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-10-05T04:12:36.981Z",
+  "libraryPath": "/home/palpinter/Zenék",
+  "summary": {
+    "totalFiles": 96,
+    "flacFiles": 83,
+    "albums": 4,
+    "errors": 0
+  },
+  "statistics": {
+    "byGenre": {},
+    "byArtist": {
+      "Dead Can Dance": 1,
+      "Various Artists": 1,
+      "London Symphony Orchestra, Claudio Abbado": 1,
+      "Teresa Berganza, Plácido Domingo, London Symphony Orchestra, Claudio Abbado": 1
+    },
+    "byYear": {
+      "1978": 2,
+      "1993": 1,
+      "2003": 1
+    }
+  },
+  "errors": []
+}

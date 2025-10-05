@@ -23,8 +23,6 @@ A Node.js/TypeScript CLI tool that reorganizes a large FLAC music library (~3,00
 
 ## Build and Development Commands
 
-This project is in the planning stage. Once implemented, the expected commands will be:
-
 ```bash
 # Install dependencies
 npm install
@@ -35,12 +33,18 @@ npm run build
 # Development mode (watch)
 npm run dev
 
-# Run tests
+# Run tests (not yet implemented)
 npm test
 
-# Link for global use (development)
-npm link
+# Available CLI commands
+node dist/index.js analyze <path>   # Scan and analyze library
+node dist/index.js classify <path>  # Multi-stage genre classification
 ```
+
+**Implementation Status:**
+- ✅ Phase 1: Core foundation (scanner, metadata reader, analyze command)
+- ✅ Phase 2: Genre classification pipeline (all 4 stages implemented)
+- ⏳ Phase 3: File reorganization (plan, organize, verify commands)
 
 ## Core Architecture
 
