@@ -380,7 +380,61 @@ Work Categories for Classical:
 - **Operating System**: Linux (local) and Linux-based NAS (network)
 - **File System**: Case-sensitive (ext4, btrfs, etc.)
 - **Network**: Support for network file operations (NAS access)
-- **No Windows limitations**: No path length restrictions, all characters allowed in filenames
+- **Cross-platform compatibility**: Path sanitization for Windows compatibility
+- **Required System Tools**: `metaflac` (from flac package) for FLAC tag manipulation
+
+### Path Sanitization Rules (NEW)
+To ensure cross-platform compatibility (especially Windows), the following character replacements are applied to all filenames and directory names:
+
+- **Colon (`:`)** → **Space + Dash (` -`)**
+  - Example: `Bizet: Carmen` → `Bizet - Carmen`
+  - Example: `Forces of Nature: Live at Slugs'` → `Forces of Nature - Live at Slugs'`
+- **Double Quotes (`"`)** → **Removed**
+  - Example: `"Je vais danser"` → `Je vais danser`
+- **Other Windows forbidden chars (`<>|?*`)** → **Underscore (`_`)**
+- **Forward slash (`/`)** → **Dash (`-`)**
+- **Backslash (`\`)** → **Dash (`-`)**
+- **Multiple spaces** → **Single space**
+- **Trailing dots** → **Removed** (Windows limitation)
+
+**Implementation**: All sanitization is handled by `src/utils/path-utils.ts`
+
+### Incremental Library Updates (NEW)
+The tool supports incremental updates to an existing organized library using the `--skip-existing` flag:
+
+**Use Case:**
+- You have a well-organized library: `~/Music`
+- You download new albums to: `~/Downloads/Music`
+- You want to add new albums to existing library without duplicating
+
+**Workflow:**
+```bash
+# 1. Classify new downloads
+music-organizer classify ~/Downloads/Music --stages ai
+
+# 2. Update tags (optional)
+music-organizer update-tags ~/Downloads/Music
+
+# 3. Generate plan targeting existing library
+music-organizer plan ~/Downloads/Music --target ~/Music
+
+# 4. Execute with --skip-existing
+music-organizer organize plan.json --skip-existing --mode copy
+# Result: Only new albums copied, existing albums skipped
+```
+
+**Behavior:**
+- Checks if target file already exists
+- If exists → skips (increments skipped counter)
+- If new → copies/moves as normal
+- Works with both `--mode copy` and `--mode move`
+- Compatible with `--dry-run` for preview
+
+**Benefits:**
+- Safe continuous library growth
+- No duplicate checking needed
+- Fast (skips file operations for existing files)
+- Works with NAS libraries
 
 ### Core Technologies
 - **Language**: TypeScript
@@ -415,6 +469,25 @@ Work Categories for Classical:
 - Read FLAC file metadata (ID3/Vorbis Comments tags)
 - Extract: artist, album, title, track number, year, genre, composer, catalog number
 - Library suggestion: `music-metadata` or `node-flac`
+
+#### 1b. FLAC Tag Writing (NEW)
+- **Write genre tags** back to FLAC files after classification
+- Use `metaflac` command-line tool for tag manipulation
+- **Intelligent genre selection**:
+  - **Classical music**: Use work category (Opera, Concertos, Symphonies, Chamber Music) instead of composer name
+  - **Modern music**: Use subgenre (Jazz, Hard Rock, Progressive) for specificity
+- **Safety features**:
+  - `--dry-run` mode to preview tag updates
+  - `--force` option to overwrite existing tags
+  - Skip files that already have genre tags (unless --force)
+  - Progress bar with statistics
+- **Implementation**: Execute `metaflac` commands via Node.js child_process
+  ```bash
+  # Remove existing genre tag
+  metaflac --remove-tag=GENRE "file.flac"
+  # Set new genre tag
+  metaflac --set-tag=GENRE="Jazz" "file.flac"
+  ```
 
 #### 2. Structure Analysis
 - Scan existing library recursively
@@ -496,6 +569,9 @@ music-organizer analyze /path/to/library --output report.json
 # Classify genres (preview classification without organizing)
 music-organizer classify /path/to/library --output classifications.json --stages=all
 
+# Update FLAC genre tags from classifications (NEW)
+music-organizer update-tags /path/to/library --input classifications.json
+
 # Preview reorganization
 music-organizer plan /path/to/library --dry-run
 
@@ -523,6 +599,8 @@ Options:
 - `--skip-cache` - Ignore cached classification results
 - `--ai-batch-size=N` - Number of albums per AI batch (default: 50)
 - `--confidence-threshold=0.0-1.0` - Minimum confidence to accept (default: 0.7)
+- `--skip-existing` - Skip files that already exist at target (for incremental updates)
+- `--force` - Update genre tags even if they already exist (for update-tags command)
 
 #### 7. Reporting
 Generate reports in JSON/CSV/Markdown:
@@ -1242,6 +1320,16 @@ Options:
        ├─> Determine main genre category
        └─> Flag unknown genres for review
 
+2b. Update Tags (NEW - Optional)
+   ├─> Read classification results
+   ├─> For each FLAC file:
+   │   ├─> Check if genre tag already exists
+   │   ├─> Determine genre to write:
+   │   │   ├─> Classical: Use work category (Opera, Concertos, etc.)
+   │   │   └─> Modern: Use subgenre (Jazz, Hard Rock, etc.)
+   │   └─> Write GENRE tag using metaflac
+   └─> Progress tracking and statistics
+
 3. Generate Plan
    ├─> Determine target structure for each file
    ├─> Apply genre hierarchy (Main Genre/Subgenre/)
@@ -1279,13 +1367,17 @@ music-organizer/
 │   ├── cli/
 │   │   ├── commands/
 │   │   │   ├── analyze.ts
+│   │   │   ├── classify.ts
 │   │   │   ├── plan.ts
 │   │   │   ├── organize.ts
+│   │   │   ├── update-tags.ts  # NEW: Update FLAC genre tags
 │   │   │   └── verify.ts
 │   │   └── index.ts
 │   ├── core/
 │   │   ├── scanner.ts          # Directory/file scanning
 │   │   ├── metadata.ts         # FLAC metadata extraction
+│   │   ├── path-generator.ts   # Generate target paths (modern + classical)
+│   │   ├── conflict-detector.ts # Detect path conflicts
 │   │   ├── classifier.ts       # Genre/type detection coordinator
 │   │   ├── genre-mapper.ts     # Genre hierarchy mapping (subgenre → main genre)
 │   │   ├── album-detector.ts   # Album type detection (regular/best-of/compilation/soundtrack)
@@ -1309,7 +1401,10 @@ music-organizer/
 │   │   ├── album.ts            # Modern music logic
 │   │   └── genre-definitions.ts # Genre mapping rules and hierarchies
 │   ├── utils/
-│   │   ├── file-ops.ts         # Safe file operations
+│   │   ├── file-operations.ts  # Safe copy/move with MD5 verification
+│   │   ├── backup.ts           # Backup manifest generation
+│   │   ├── path-utils.ts       # Path sanitization (: → -, " removal)
+│   │   ├── tag-writer.ts       # NEW: FLAC tag writing with metaflac
 │   │   ├── logger.ts           # Logging utility
 │   │   ├── reporter.ts         # Report generation
 │   │   ├── rate-limiter.ts     # API rate limiting
@@ -1811,6 +1906,20 @@ Based on your requirements (3000 albums, NAS storage, thoroughness over speed, m
    # Save corrections to improve accuracy
    ```
 
+3b. **Update FLAC Tags (NEW - Optional):**
+   ```bash
+   music-organizer update-tags /mnt/nas/music \
+     --input classifications.json \
+     --dry-run
+   # Preview tag updates
+
+   music-organizer update-tags /mnt/nas/music \
+     --input classifications.json
+   # Write genre tags to FLAC files
+   # Classical: Opera, Concertos, Symphonies, etc.
+   # Modern: Jazz, Hard Rock, Progressive, etc.
+   ```
+
 4. **Plan Reorganization (dry-run):**
    ```bash
    music-organizer plan /mnt/nas/music \
@@ -1880,6 +1989,16 @@ music-organizer review manual-review.json
 # Shows 30-50 albums needing review
 # [Alternative/Bauhaus] → Rock & Alternative > Alternative? [Y/n]
 
+# Step 5b: Update FLAC genre tags (NEW - Optional)
+music-organizer update-tags /mnt/nas/music --dry-run
+# Preview: Would update 2850 files
+# Classical → Opera, Concertos, Symphonies
+# Modern → Jazz, Hard Rock, Progressive
+
+music-organizer update-tags /mnt/nas/music
+# ✓ Updated 2850 files
+# ✓ Skipped 150 files (already have tags)
+
 # Step 6: Preview changes
 music-organizer plan /mnt/nas/music --dry-run
 # Shows proposed directory structure
@@ -1903,6 +2022,43 @@ music-organizer verify /mnt/nas/music-organized
 # Step 9: If all good, can delete originals
 # (manually, when confident)
 ```
+
+## Incremental Updates Example (NEW)
+
+For adding new downloads to an existing organized library:
+
+```bash
+# Scenario: You have ~/Music organized, new albums in ~/Downloads/Music
+
+# Step 1: Classify new downloads only
+music-organizer classify ~/Downloads/Music --stages=all
+# Classifies only the new albums
+
+# Step 2: Update tags (optional)
+music-organizer update-tags ~/Downloads/Music
+
+# Step 3: Generate plan targeting existing library
+music-organizer plan ~/Downloads/Music --target ~/Music -o new-plan.json
+
+# Step 4: Preview with dry-run
+music-organizer organize new-plan.json --skip-existing --dry-run
+# Shows:
+# ✅ Success: 50 (new albums to be added)
+# ⏭️  Skipped: 5 (already exist in ~/Music)
+
+# Step 5: Execute
+music-organizer organize new-plan.json --skip-existing --mode copy
+# Result:
+# - 50 new albums copied to ~/Music
+# - 5 existing albums skipped (no duplicates)
+# - Library grows safely without manual deduplication
+```
+
+**Benefits:**
+- No need to reclassify entire library
+- Fast (only processes new files)
+- Safe (existing files never overwritten)
+- Perfect for continuous library growth
 
 **First Run Expected Results:**
 ```
@@ -1938,8 +2094,17 @@ Performer Information:
 ├─ Successfully extracted: 550 albums (92%)
 ├─ Missing performer data: 50 albums (8% - flagged for review)
 
+FLAC Tag Updates (NEW):
+├─ Total files: 12,000
+├─ Updated with genre tags: 11,400 (95%)
+├─ Skipped (already tagged): 600 (5%)
+├─ Genre distribution:
+│   ├─ Classical tags: Opera (180), Concertos (220), Symphonies (150), Chamber Music (50)
+│   ├─ Modern tags: Jazz (300), Hard Rock (450), Alternative (520), Progressive (180)
+│   └─ Other: Metal (380), Punk (370), Ambient (200), etc.
+
 Cost: $0.65 (Claude API for 145 albums)
-Time: 52 minutes
+Time: 52 minutes (classification) + 8 minutes (tag writing)
 ```
 
 ## Troubleshooting Guide for 3000 Album NAS Library
@@ -2059,6 +2224,31 @@ Time: 52 minutes
   - Review album IDs or catalogue info
   - Manually merge if duplicates, keep if different recordings
 
+**15. "metaflac not found / tag writing fails" (NEW)**
+- **Problem:** `update-tags` command fails with metaflac error
+- **Solution:**
+  - Install flac package: `sudo pacman -S flac` (Arch) or `sudo apt install flac` (Debian)
+  - Verify installation: `which metaflac` should return `/usr/bin/metaflac`
+  - Check file permissions: FLAC files must be writable
+  - Test manually: `metaflac --show-tag=GENRE file.flac`
+
+**16. "Genre tags not matching directory structure" (NEW)**
+- **Problem:** File in Classical/Bizet/Opera but GENRE=Bizet
+- **Solution:**
+  - This was the old behavior (before update-tags feature)
+  - Run `update-tags` command with `--force` flag to update all tags
+  - Classical files will get work category (Opera, Concertos, etc.)
+  - Modern files will get subgenre (Jazz, Hard Rock, etc.)
+  - Example: `music-organizer update-tags ~/Music --force`
+
+**17. "Incremental update duplicating files" (NEW)**
+- **Problem:** New downloads create duplicates in organized library
+- **Solution:**
+  - Always use `--skip-existing` flag
+  - Check target path in plan.json matches organized library
+  - If duplicates created, they're in different subgenres (check classification)
+  - Use dry-run first: `organize plan.json --skip-existing --dry-run`
+
 ### Performance Benchmarks
 
 **Tested on Synology DS920+ (4-bay NAS):**
@@ -2084,3 +2274,113 @@ Success Rate: 96% automatic classification
 - Process during low-usage hours
 - Consider 2.5Gb or 10Gb network if available
 - Disable NAS indexing services temporarily
+
+---
+
+## New Features Summary (Latest Updates)
+
+### 1. FLAC Tag Writing (`update-tags` command)
+**Purpose:** Write genre tags back to FLAC files after classification
+
+**Key Features:**
+- Uses `metaflac` command-line tool for tag manipulation
+- Intelligent genre selection:
+  - **Classical music**: Work category (Opera, Concertos, Symphonies, Chamber Music)
+  - **Modern music**: Subgenre (Jazz, Hard Rock, Progressive)
+- Safety features: `--dry-run`, `--force`, skip already tagged files
+- Progress bar with detailed statistics
+
+**Usage:**
+```bash
+# Preview tag updates
+music-organizer update-tags ~/Music --dry-run
+
+# Write tags
+music-organizer update-tags ~/Music --input classifications.json
+
+# Force update all tags
+music-organizer update-tags ~/Music --force
+```
+
+**Implementation:**
+- `src/utils/tag-writer.ts` - Tag writing utilities
+- `src/cli/commands/update-tags.ts` - CLI command
+- `src/core/path-generator.ts` - `detectWorkCategory()` export for Classical works
+
+### 2. Path Sanitization Improvements
+**Purpose:** Ensure cross-platform compatibility and readable filenames
+
+**Changes:**
+- **Colon (`:`)** → **` -`** (space + dash)
+  - Old: `Bizet: Carmen` → `Bizet_ Carmen`
+  - New: `Bizet: Carmen` → `Bizet - Carmen`
+- **Quotes (`"`)** → **Removed**
+  - Old: `"Je vais danser"` → `_Je vais danser_`
+  - New: `"Je vais danser"` → `Je vais danser`
+
+**Benefits:**
+- More readable filenames
+- Better compatibility with Windows
+- Consistent with music player conventions
+
+**Implementation:**
+- `src/utils/path-utils.ts` - Updated `sanitizeFilename()` function
+
+### 3. Incremental Library Updates (`--skip-existing`)
+**Purpose:** Add new albums to existing organized library without duplicates
+
+**Key Features:**
+- Skip files that already exist at target location
+- Works with both `copy` and `move` modes
+- Compatible with `--dry-run` for preview
+- Fast (no file operations for existing files)
+
+**Usage:**
+```bash
+# Classify new downloads
+music-organizer classify ~/Downloads/Music --stages ai
+
+# Generate plan targeting existing library
+music-organizer plan ~/Downloads/Music --target ~/Music
+
+# Execute with skip-existing
+music-organizer organize plan.json --skip-existing --mode copy
+```
+
+**Benefits:**
+- Safe continuous library growth
+- No manual deduplication needed
+- Perfect for ongoing music collection
+
+**Implementation:**
+- `src/cli/commands/organize.ts` - Added `--skip-existing` option
+- Skip logic in file operation loop
+
+### 4. Complete Workflow Integration
+
+**Enhanced workflow with all features:**
+```bash
+# 1. Analyze
+music-organizer analyze ~/Downloads/Music
+
+# 2. Classify (AI + APIs)
+music-organizer classify ~/Downloads/Music --stages all
+
+# 3. Update tags (NEW)
+music-organizer update-tags ~/Downloads/Music
+
+# 4. Plan
+music-organizer plan ~/Downloads/Music --target ~/Music
+
+# 5. Execute with skip-existing (NEW)
+music-organizer organize plan.json --skip-existing --mode copy
+```
+
+**Result:**
+- Fully classified library
+- FLAC files with proper genre tags
+- Clean directory structure
+- Incremental updates supported
+- Cross-platform compatible paths
+
+---
