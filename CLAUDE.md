@@ -44,7 +44,8 @@ node dist/index.js classify <path>  # Multi-stage genre classification
 **Implementation Status:**
 - ✅ Phase 1: Core foundation (scanner, metadata reader, analyze command)
 - ✅ Phase 2: Genre classification pipeline (all 4 stages implemented)
-- ⏳ Phase 3: File reorganization (plan, organize, verify commands)
+- ✅ Phase 3: Reorganization planning (path generation, conflict detection, plan command)
+- ⏳ Phase 4: File operations (organize, verify, backup commands)
 
 ## Core Architecture
 

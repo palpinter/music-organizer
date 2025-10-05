@@ -10,6 +10,8 @@ const configDir = path.join(os.homedir(), '.config', 'music-organizer');
 dotenv.config({ path: path.join(configDir, '.env') });
 import { analyzeCommand } from './cli/commands/analyze';
 import { classifyCommand } from './cli/commands/classify';
+import { planCommand } from './cli/commands/plan';
+import { organizeCommand } from './cli/commands/organize';
 
 const program = new Command();
 
@@ -21,10 +23,10 @@ program
 // Add commands
 program.addCommand(analyzeCommand);
 program.addCommand(classifyCommand);
+program.addCommand(planCommand);
+program.addCommand(organizeCommand);
 
 // TODO: Add more commands as they are implemented
-// program.addCommand(planCommand);
-// program.addCommand(organizeCommand);
 // program.addCommand(verifyCommand);
 // program.addCommand(reviewCommand);
 

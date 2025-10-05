@@ -4,6 +4,7 @@
 
 **Phase 1 - Core Foundation: COMPLETED** ✅
 **Phase 2 - Genre Classification Pipeline: COMPLETED** ✅
+**Phase 3 - Reorganization Planning: COMPLETED** ✅
 
 ### What's Been Implemented
 
@@ -24,6 +25,15 @@
 6. ✅ Claude AI batch classifier
 7. ✅ Multi-stage strategy orchestrator
 8. ✅ `classify` CLI command with progress bar
+
+#### Phase 3: Reorganization Planning
+1. ✅ Path sanitization utilities
+2. ✅ Modern music path generator (Genre/Subgenre/Artist/Year - Album/)
+3. ✅ Classical music path generator (Classical/Composer/Category/Work/)
+4. ✅ Classical composer name parser (Lastname, Firstname format)
+5. ✅ Performer folder generation (Conductor - Orchestra)
+6. ✅ Conflict detection (duplicate paths, missing metadata)
+7. ✅ `plan` CLI command with dry-run preview
 
 ## Development
 
@@ -108,15 +118,45 @@ node dist/index.js classify ~/Zenék/Alternative --stages ai
 
 **API Keys (Optional):**
 
-Create `.env` file or export environment variables:
+Create `.env` file in `~/.config/music-organizer/.env`:
 
 ```bash
 # Anthropic Claude API (for AI classification)
-export ANTHROPIC_API_KEY=sk-ant-api03-...
+ANTHROPIC_API_KEY=sk-ant-api03-...
 
 # Discogs API (for better coverage)
-export DISCOGS_API_KEY=your-key
-export DISCOGS_API_SECRET=your-secret
+DISCOGS_API_KEY=your-key
+DISCOGS_API_SECRET=your-secret
+```
+
+#### `plan`
+
+Generate reorganization plan (dry-run preview).
+
+```bash
+node dist/index.js plan /path/to/library
+
+# Options:
+# -o, --output <file>          Output file (default: reorganization-plan.json)
+# --target <path>              Target base directory (default: ./reorganized)
+# --use-performer-folders      Use performer subfolders for classical (default: true)
+```
+
+**Output:**
+- Console summary with statistics
+- Directory structure preview
+- Sample file moves
+- Conflict detection
+- JSON plan file
+
+**Examples:**
+
+```bash
+# Generate plan with default settings
+node dist/index.js plan ~/Zenék --target ~/Zenék-Reorganized
+
+# Preview only, custom output
+node dist/index.js plan ~/Zenék --target /tmp/test --output my-plan.json
 ```
 
 ## What Works Now
@@ -149,36 +189,42 @@ Multi-stage genre classification:
 6. **Progress tracking**: Real-time progress bar
 7. **Statistics**: Classification success rate, source breakdown, confidence levels
 
-## Next Steps (Phase 3)
+## Next Steps (Phase 4)
 
 To continue development:
 
-1. **Manual Review Interface**:
-   - CLI tool to review low-confidence classifications
-   - Edit classifications interactively
-   - Save corrections back to cache
-
-2. **Implement `plan` command**:
-   - Generate reorganization plan (dry-run)
-   - Show before/after directory structure
-   - Detect conflicts
-
-3. **Implement `organize` command**:
-   - Execute file reorganization
+1. **Implement `organize` command**:
+   - Execute file reorganization from plan
    - Copy/move modes
    - Multi-disc handling
    - Backup functionality
+   - Progress bar with ETA
+   - File integrity verification (checksums)
+   - Resume capability after interruption
 
-4. **Classical Music Support**:
-   - Composer detection
-   - Catalog number parsing (RV, K., BWV, etc.)
-   - Performer extraction (conductor, orchestra)
-   - Multiple recordings grouping
+2. **Enhanced Classical Music Support**:
+   - Catalog number parsing (RV, K., BWV, Op., etc.)
+   - Work category auto-detection (Symphony, Concerto, etc.)
+   - Multiple recordings grouping (same work, different performers)
+   - Better performer extraction from tags
+
+3. **Manual Review Interface**:
+   - CLI tool to review low-confidence classifications
+   - Edit classifications interactively
+   - Save corrections back to cache
+   - Flag albums for manual inspection
+
+4. **Implement `verify` command**:
+   - Verify reorganized library integrity
+   - Compare source/target checksums
+   - Report missing files
+   - Validate directory structure
 
 5. **Configuration System**:
    - Load from `~/.config/music-organizer/config.json`
    - Customizable genre mappings
    - Stage priorities
+   - Path templates
 
 ## Testing
 

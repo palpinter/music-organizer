@@ -10,7 +10,17 @@
       "Bash(npm install:*)",
       "Bash(LOG_LEVEL=debug node dist/index.js classify ~/Zenék/Alternative/\"Dead Can Dance\" --stages musicbrainz --output test-classify-mb2.json)",
       "Bash(export LOG_LEVEL=debug)",
-      "Bash(export LOG_LEVEL=info)"
+      "Bash(export LOG_LEVEL=info)",
+      "Bash(cat:*)",
+      "Bash(LOG_LEVEL=info node dist/index.js organize plan-fixed.json --dry-run)",
+      "Bash(LOG_LEVEL=info node dist/index.js organize plan-fixed.json --mode copy --backup /tmp/music-backup)",
+      "Bash(tree:*)",
+      "Read(//tmp/test-reorganized/Classical/Bizet/Opera/Carmen/**)",
+      "Read(//tmp/music-backup/backup-2025-10-05/**)",
+      "Read(//tmp/test-reorganized/**)",
+      "Bash(SOURCE=\"/home/palpinter/Zenék/Alternative/Dead Can Dance/Into the Labyrinth (Remastered) [2205802] [1993]/01 - Dead Can Dance - Yulunga (Spirit Dance).flac\")",
+      "Bash(TARGET=\"/tmp/test-reorganized/World & Folk/World/Dead Can Dance/1993 - Into the Labyrinth (Remastered)/01 - Yulunga (Spirit Dance).flac\")",
+      "Bash(md5sum:*)"
     ],
     "deny": [],
     "ask": []

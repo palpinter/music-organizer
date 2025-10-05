@@ -1,0 +1,605 @@
+{
+  "timestamp": "2025-10-05T04:51:13.677Z",
+  "sourceLibrary": "/home/palpinter/Zenék",
+  "targetLibrary": "/tmp/test-reorganized",
+  "summary": {
+    "totalFiles": 83,
+    "classifiedFiles": 83,
+    "unclassifiedFiles": 0,
+    "totalMoves": 83,
+    "conflicts": 0,
+    "conflictingFiles": 0
+  },
+  "options": {
+    "usePerformerFolders": true
+  },
+  "directories": [
+    "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen",
+    "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto",
+    "/tmp/test-reorganized/World & Folk/World/Dead Can Dance/1993 - Into the Labyrinth (Remastered)"
+  ],
+  "fileMoves": [
+    {
+      "sourcePath": "/home/palpinter/Zenék/Alternative/Dead Can Dance/Into the Labyrinth (Remastered) [2205802] [1993]/01 - Dead Can Dance - Yulunga (Spirit Dance).flac",
+      "targetPath": "/tmp/test-reorganized/World & Folk/World/Dead Can Dance/1993 - Into the Labyrinth (Remastered)/01 - Yulunga (Spirit Dance).flac",
+      "artist": "Dead Can Dance",
+      "album": "Into the Labyrinth (Remastered)",
+      "title": "Yulunga (Spirit Dance)"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Alternative/Dead Can Dance/Into the Labyrinth (Remastered) [2205802] [1993]/02 - Dead Can Dance - The Ubiquitous Mr. Lovegrove (Remastered).flac",
+      "targetPath": "/tmp/test-reorganized/World & Folk/World/Dead Can Dance/1993 - Into the Labyrinth (Remastered)/02 - The Ubiquitous Mr. Lovegrove (Remastered).flac",
+      "artist": "Dead Can Dance",
+      "album": "Into the Labyrinth (Remastered)",
+      "title": "The Ubiquitous Mr. Lovegrove (Remastered)"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Alternative/Dead Can Dance/Into the Labyrinth (Remastered) [2205802] [1993]/03 - Dead Can Dance - The Wind That Shakes the Barley (Remastered).flac",
+      "targetPath": "/tmp/test-reorganized/World & Folk/World/Dead Can Dance/1993 - Into the Labyrinth (Remastered)/03 - The Wind That Shakes the Barley (Remastered).flac",
+      "artist": "Dead Can Dance",
+      "album": "Into the Labyrinth (Remastered)",
+      "title": "The Wind That Shakes the Barley (Remastered)"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Alternative/Dead Can Dance/Into the Labyrinth (Remastered) [2205802] [1993]/04 - Dead Can Dance - The Carnival Is Over (Remastered).flac",
+      "targetPath": "/tmp/test-reorganized/World & Folk/World/Dead Can Dance/1993 - Into the Labyrinth (Remastered)/04 - The Carnival Is Over (Remastered).flac",
+      "artist": "Dead Can Dance",
+      "album": "Into the Labyrinth (Remastered)",
+      "title": "The Carnival Is Over (Remastered)"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Alternative/Dead Can Dance/Into the Labyrinth (Remastered) [2205802] [1993]/05 - Dead Can Dance - Ariadne (Remastered).flac",
+      "targetPath": "/tmp/test-reorganized/World & Folk/World/Dead Can Dance/1993 - Into the Labyrinth (Remastered)/05 - Ariadne (Remastered).flac",
+      "artist": "Dead Can Dance",
+      "album": "Into the Labyrinth (Remastered)",
+      "title": "Ariadne (Remastered)"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Alternative/Dead Can Dance/Into the Labyrinth (Remastered) [2205802] [1993]/06 - Dead Can Dance - Saldek (Remastered).flac",
+      "targetPath": "/tmp/test-reorganized/World & Folk/World/Dead Can Dance/1993 - Into the Labyrinth (Remastered)/06 - Saldek (Remastered).flac",
+      "artist": "Dead Can Dance",
+      "album": "Into the Labyrinth (Remastered)",
+      "title": "Saldek (Remastered)"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Alternative/Dead Can Dance/Into the Labyrinth (Remastered) [2205802] [1993]/07 - Dead Can Dance - Towards the Within (Remastered).flac",
+      "targetPath": "/tmp/test-reorganized/World & Folk/World/Dead Can Dance/1993 - Into the Labyrinth (Remastered)/07 - Towards the Within (Remastered).flac",
+      "artist": "Dead Can Dance",
+      "album": "Into the Labyrinth (Remastered)",
+      "title": "Towards the Within (Remastered)"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Alternative/Dead Can Dance/Into the Labyrinth (Remastered) [2205802] [1993]/08 - Dead Can Dance - Tell Me About the Forest (You Once Called Home) (Remastered).flac",
+      "targetPath": "/tmp/test-reorganized/World & Folk/World/Dead Can Dance/1993 - Into the Labyrinth (Remastered)/08 - Tell Me About the Forest (You Once Called Home) (Remastered).flac",
+      "artist": "Dead Can Dance",
+      "album": "Into the Labyrinth (Remastered)",
+      "title": "Tell Me About the Forest (You Once Called Home) (Remastered)"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Alternative/Dead Can Dance/Into the Labyrinth (Remastered) [2205802] [1993]/09 - Dead Can Dance - The Spider's Stratagem (Remastered).flac",
+      "targetPath": "/tmp/test-reorganized/World & Folk/World/Dead Can Dance/1993 - Into the Labyrinth (Remastered)/09 - The Spider's Stratagem (Remastered).flac",
+      "artist": "Dead Can Dance",
+      "album": "Into the Labyrinth (Remastered)",
+      "title": "The Spider's Stratagem (Remastered)"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Alternative/Dead Can Dance/Into the Labyrinth (Remastered) [2205802] [1993]/10 - Dead Can Dance - Emmeleia (Remastered).flac",
+      "targetPath": "/tmp/test-reorganized/World & Folk/World/Dead Can Dance/1993 - Into the Labyrinth (Remastered)/10 - Emmeleia (Remastered).flac",
+      "artist": "Dead Can Dance",
+      "album": "Into the Labyrinth (Remastered)",
+      "title": "Emmeleia (Remastered)"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Alternative/Dead Can Dance/Into the Labyrinth (Remastered) [2205802] [1993]/11 - Dead Can Dance - How Fortunate the Man With None (Remastered).flac",
+      "targetPath": "/tmp/test-reorganized/World & Folk/World/Dead Can Dance/1993 - Into the Labyrinth (Remastered)/11 - How Fortunate the Man With None (Remastered).flac",
+      "artist": "Dead Can Dance",
+      "album": "Into the Labyrinth (Remastered)",
+      "title": "How Fortunate the Man With None (Remastered)"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/01 - Various Artists - Concerto con violino e viola da gamba, Archi e Continuo (La Maggiore, RV 546)- I. Allegro.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/01 - Concerto con violino e viola da gamba, Archi e Continuo (La Maggiore, RV 546)_ I. Allegro.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con violino e viola da gamba, Archi e Continuo (La Maggiore, RV 546): I. Allegro"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/02 - Various Artists - Concerto con violino e viola da gamba, Archi e continuo (La Maggiore, RV 546)- II. Andante.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/02 - Concerto con violino e viola da gamba, Archi e continuo (La Maggiore, RV 546)_ II. Andante.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con violino e viola da gamba, Archi e continuo (La Maggiore, RV 546): II. Andante"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/03 - Various Artists - Concerto con violino e viola da gamba, Archi e continuo (La Maggiore, RV 546)- III. Allegro.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/03 - Concerto con violino e viola da gamba, Archi e continuo (La Maggiore, RV 546)_ III. Allegro.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con violino e viola da gamba, Archi e continuo (La Maggiore, RV 546): III. Allegro"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/04 - Various Artists - Concerto con 2 violini e viola da gamba, Archi e Continuo (Re Minore, RV 565)- I. Allegro, Adagio e spiccato.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/04 - Concerto con 2 violini e viola da gamba, Archi e Continuo (Re Minore, RV 565)_ I. Allegro, Adagio e spiccato.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con 2 violini e viola da gamba, Archi e Continuo (Re Minore, RV 565): I. Allegro, Adagio e spiccato"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/05 - Various Artists - Concerto con 2 violini e viola da gamba, Archi e continuo (Re Minore, RV 565)- II. Allegro.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/05 - Concerto con 2 violini e viola da gamba, Archi e continuo (Re Minore, RV 565)_ II. Allegro.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con 2 violini e viola da gamba, Archi e continuo (Re Minore, RV 565): II. Allegro"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/06 - Various Artists - Concerto con 2 violini e viola da gamba, Archi e continuo (Re Minore, RV 565)- III. Largo e spiccato.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/06 - Concerto con 2 violini e viola da gamba, Archi e continuo (Re Minore, RV 565)_ III. Largo e spiccato.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con 2 violini e viola da gamba, Archi e continuo (Re Minore, RV 565): III. Largo e spiccato"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/07 - Various Artists - Concerto con 2 violini e viola da gamba, Archi e continuo (Re Minore, RV 565)- IV. Allegro.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/07 - Concerto con 2 violini e viola da gamba, Archi e continuo (Re Minore, RV 565)_ IV. Allegro.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con 2 violini e viola da gamba, Archi e continuo (Re Minore, RV 565): IV. Allegro"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/08 - Various Artists - -Concerto Funebre- con hautbois sordini e salmoè, violino principale e viole da gamba (Si Bem. Maggiore, RV 579)- I. Largo.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/08 - _Concerto Funebre_ con hautbois sordini e salmoè, violino principale e viole da gamba (Si Bem. Maggiore, RV 579)_ I. Largo.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "\"Concerto Funebre\" con hautbois sordini e salmoè, violino principale e viole da gamba (Si Bem. Maggiore, RV 579): I. Largo"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/09 - Various Artists - -Concerto Funebre- con hautbois sordini e salmoè, violino principale e viole da gamba (Si Bem. Maggiore, RV 579)- II. Allegro poco poco.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/09 - _Concerto Funebre_ con hautbois sordini e salmoè, violino principale e viole da gamba (Si Bem. Maggiore, RV 579)_ II. Allegro poco poco.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "\"Concerto Funebre\" con hautbois sordini e salmoè, violino principale e viole da gamba (Si Bem. Maggiore, RV 579): II. Allegro poco poco"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/10 - Various Artists - -Concerto Funebre- con hautbois sordini e salmoè, violino principale e viole da gamba (Si Bem. Maggiore, RV 579)- III. Allegro.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/10 - _Concerto Funebre_ con hautbois sordini e salmoè, violino principale e viole da gamba (Si Bem. Maggiore, RV 579)_ III. Allegro.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "\"Concerto Funebre\" con hautbois sordini e salmoè, violino principale e viole da gamba (Si Bem. Maggiore, RV 579): III. Allegro"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/11 - Various Artists - Concerto -Il proteo o sia il mondo al Rovescio- con violino e violoncello, Archi e continuo (Fa Maggiore, RV 544)- I. Allegro.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/11 - Concerto _Il proteo o sia il mondo al Rovescio_ con violino e violoncello, Archi e continuo (Fa Maggiore, RV 544)_ I. Allegro.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto \"Il proteo o sia il mondo al Rovescio\" con violino e violoncello, Archi e continuo (Fa Maggiore, RV 544): I. Allegro"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/12 - Various Artists - Concerto -Il proteo o sia il mondo al Rovescio- con violino e violoncello, Archi e continuo (Fa Maggiore, RV 544)- II. Largo.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/12 - Concerto _Il proteo o sia il mondo al Rovescio_ con violino e violoncello, Archi e continuo (Fa Maggiore, RV 544)_ II. Largo.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto \"Il proteo o sia il mondo al Rovescio\" con violino e violoncello, Archi e continuo (Fa Maggiore, RV 544): II. Largo"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/13 - Various Artists - Concerto -Il proteo o sia il mondo al Rovescio- con violino e violoncello, Archi e continuo (Fa Maggiore, RV 544)- III. Allegro.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/13 - Concerto _Il proteo o sia il mondo al Rovescio_ con violino e violoncello, Archi e continuo (Fa Maggiore, RV 544)_ III. Allegro.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto \"Il proteo o sia il mondo al Rovescio\" con violino e violoncello, Archi e continuo (Fa Maggiore, RV 544): III. Allegro"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/14 - Various Artists - Concerto con 2 violini e viola da gamba, Archi e continuo (Sol Minore, RV 578)- I. Adagio e spiccato.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/14 - Concerto con 2 violini e viola da gamba, Archi e continuo (Sol Minore, RV 578)_ I. Adagio e spiccato.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con 2 violini e viola da gamba, Archi e continuo (Sol Minore, RV 578): I. Adagio e spiccato"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/15 - Various Artists - Concerto con 2 violini e viola da gamba, Archi e continuo (Sol Minore, RV 578)- II. Larghetto.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/15 - Concerto con 2 violini e viola da gamba, Archi e continuo (Sol Minore, RV 578)_ II. Larghetto.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con 2 violini e viola da gamba, Archi e continuo (Sol Minore, RV 578): II. Larghetto"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/16 - Various Artists - Concerto con 2 violini e viola da gamba, Archi e continuo (Sol Minore, RV 578)- III. Allegro.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/16 - Concerto con 2 violini e viola da gamba, Archi e continuo (Sol Minore, RV 578)_ III. Allegro.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con 2 violini e viola da gamba, Archi e continuo (Sol Minore, RV 578): III. Allegro"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/17 - Various Artists - Concerto con 4 violini e violoncello, Archi e continuo (Si Minore, RV 580)- I. Allegro.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/17 - Concerto con 4 violini e violoncello, Archi e continuo (Si Minore, RV 580)_ I. Allegro.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con 4 violini e violoncello, Archi e continuo (Si Minore, RV 580): I. Allegro"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/18 - Various Artists - Concerto con 4 violini e violoncello, Archi e continuo (Si Minore, RV 580)- II. Largo.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/18 - Concerto con 4 violini e violoncello, Archi e continuo (Si Minore, RV 580)_ II. Largo.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con 4 violini e violoncello, Archi e continuo (Si Minore, RV 580): II. Largo"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/19 - Various Artists - Concerto con 4 violini e violoncello, Archi e continuo (Si Minore, RV 580)- III. Larghetto. Adagio - Largo.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/19 - Concerto con 4 violini e violoncello, Archi e continuo (Si Minore, RV 580)_ III. Larghetto. Adagio - Largo.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con 4 violini e violoncello, Archi e continuo (Si Minore, RV 580): III. Larghetto. Adagio - Largo"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/20 - Various Artists - Concerto con 4 violini e violoncello, Archi e continuo (Si Minore, RV 580)- IV. Allegro.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/20 - Concerto con 4 violini e violoncello, Archi e continuo (Si Minore, RV 580)_ IV. Allegro.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con 4 violini e violoncello, Archi e continuo (Si Minore, RV 580): IV. Allegro"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/21 - Various Artists - Concerto con molti istromenti (Do Maggiore, RV 555)- I. Allegro.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/21 - Concerto con molti istromenti (Do Maggiore, RV 555)_ I. Allegro.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con molti istromenti (Do Maggiore, RV 555): I. Allegro"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/22 - Various Artists - Concerto con molti istromenti (Do Maggiore, RV 555)- II. Largo e spicato.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/22 - Concerto con molti istromenti (Do Maggiore, RV 555)_ II. Largo e spicato.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con molti istromenti (Do Maggiore, RV 555): II. Largo e spicato"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Klasszikus/Antonio Vivaldi- La Viola Da Gamba In Concerto [11994266] [2003]/23 - Various Artists - Concerto con molti istromenti (Do Maggiore, RV 555)- III. Allegro.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Vivaldi, Antonio/Concertos/Antonio Vivaldi_ La Viola Da Gamba In Concerto/23 - Concerto con molti istromenti (Do Maggiore, RV 555)_ III. Allegro.flac",
+      "artist": "Various Artists",
+      "album": "Antonio Vivaldi: La Viola Da Gamba In Concerto",
+      "title": "Concerto con molti istromenti (Do Maggiore, RV 555): III. Allegro"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/01 - London Symphony Orchestra - Bizet- Carmen, WD 31 - Overture (Prelude).flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/01 - Bizet_ Carmen, WD 31 - Overture (Prelude).flac",
+      "artist": "London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 - Overture (Prelude)"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/02 - Stuart Harling - Bizet- Carmen, WD 31 - Act 1 - Introduction- -Sur la place chacun passe-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/02 - Bizet_ Carmen, WD 31 - Act 1 - Introduction_ _Sur la place chacun passe_.flac",
+      "artist": "Stuart Harling, London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers, John McCarthy",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - Introduction: \"Sur la place chacun passe\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/03 - Stuart Harling - Bizet- Carmen, WD 31 - Act 1 - -Regardez donc cette petite-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/03 - Bizet_ Carmen, WD 31 - Act 1 - _Regardez donc cette petite_.flac",
+      "artist": "Stuart Harling, Ileana Cotrubas, London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers, John McCarthy",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - \"Regardez donc cette petite\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/04 - London Symphony Orchestra - Bizet- Carmen, WD 31 - Act 1 - -Avec la garde montante-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/04 - Bizet_ Carmen, WD 31 - Act 1 - _Avec la garde montante_.flac",
+      "artist": "London Symphony Orchestra, Claudio Abbado, Watson's George College Boys' Chorus",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - \"Avec la garde montante\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/05 - Robert Lloyd - Bizet- Carmen, WD 31 - Act 1 - -Repos!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/05 - Bizet_ Carmen, WD 31 - Act 1 - _Repos!_.flac",
+      "artist": "Robert Lloyd, Stuart Harling, Plácido Domingo, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - \"Repos!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/06 - Robert Lloyd - Bizet- Carmen, WD 31 - Act 1 - -Allons! Allons!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/06 - Bizet_ Carmen, WD 31 - Act 1 - _Allons! Allons!_.flac",
+      "artist": "Robert Lloyd, London Symphony Orchestra, Claudio Abbado, Watson's George College Boys' Chorus, Patrick Criswell",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - \"Allons! Allons!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/07 - Robert Lloyd - Bizet- Carmen, WD 31 - Act 1 - -Dites-moi, brigadier--.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/07 - Bizet_ Carmen, WD 31 - Act 1 - _Dites-moi, brigadier__.flac",
+      "artist": "Robert Lloyd, Plácido Domingo, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - \"Dites-moi, brigadier?\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/08 - London Symphony Orchestra - Bizet- Carmen, WD 31 - Act 1 - -La cloche a sonné-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/08 - Bizet_ Carmen, WD 31 - Act 1 - _La cloche a sonné_.flac",
+      "artist": "London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - \"La cloche a sonné\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/09 - London Symphony Orchestra - Bizet- Carmen, WD 31 - Act 1 - -Mais nous ne voyons pas la Carmencita-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/09 - Bizet_ Carmen, WD 31 - Act 1 - _Mais nous ne voyons pas la Carmencita_.flac",
+      "artist": "London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - \"Mais nous ne voyons pas la Carmencita\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/10 - Teresa Berganza - Bizet- Carmen, WD 31 - Act 1 - -Quand je vous aimerai-- - -L'amour est un oiseau rebelle-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/10 - Bizet_ Carmen, WD 31 - Act 1 - _Quand je vous aimerai__ - _L'amour est un oiseau rebelle_.flac",
+      "artist": "Teresa Berganza, London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - \"Quand je vous aimerai?\" - \"L'amour est un oiseau rebelle\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/11 - Plácido Domingo - Bizet- Carmen, WD 31 - Act 1 - -Carmen, sur tes pas, nous nous pressons tous-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/11 - Bizet_ Carmen, WD 31 - Act 1 - _Carmen, sur tes pas, nous nous pressons tous_.flac",
+      "artist": "Plácido Domingo, London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers, John McCarthy",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - \"Carmen, sur tes pas, nous nous pressons tous\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/12 - Ileana Cotrubas - Bizet- Carmen, WD 31 - Act 1 - -Monsieur le brigadier-- - -Parle-moi de ma mère!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/12 - Bizet_ Carmen, WD 31 - Act 1 - _Monsieur le brigadier__ - _Parle-moi de ma mère!_.flac",
+      "artist": "Ileana Cotrubas, Plácido Domingo, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - \"Monsieur le brigadier?\" - \"Parle-moi de ma mère!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/13 - Ileana Cotrubas - Bizet- Carmen, WD 31 - Act 1 - -Votre mère avec moi sortait de la chapelle-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/13 - Bizet_ Carmen, WD 31 - Act 1 - _Votre mère avec moi sortait de la chapelle_.flac",
+      "artist": "Ileana Cotrubas, Plácido Domingo, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - \"Votre mère avec moi sortait de la chapelle\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/14 - Plácido Domingo - Bizet- Carmen, WD 31 - Act 1 - -Ma mère, je la vois...-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/14 - Bizet_ Carmen, WD 31 - Act 1 - _Ma mère, je la vois..._.flac",
+      "artist": "Plácido Domingo, Ileana Cotrubas, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - \"Ma mère, je la vois...\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/15 - Plácido Domingo - Bizet- Carmen, WD 31 - Act 1 - -Que son fils l'aime et la vénère- - -Eh bien, eh bien!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/15 - Bizet_ Carmen, WD 31 - Act 1 - _Que son fils l'aime et la vénère_ - _Eh bien, eh bien!_.flac",
+      "artist": "Plácido Domingo, Ileana Cotrubas, Robert Lloyd, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - \"Que son fils l'aime et la vénère\" - \"Eh bien, eh bien!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/16 - Robert Lloyd - Bizet- Carmen, WD 31 - Act 1 - -Au secours!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/16 - Bizet_ Carmen, WD 31 - Act 1 - _Au secours!_.flac",
+      "artist": "Robert Lloyd, London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers, John McCarthy",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - \"Au secours!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/17 - Robert Lloyd - Bizet- Carmen, WD 31 - Act 1 - -Voyons, brigadier...- - -Tra la la la...-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/17 - Bizet_ Carmen, WD 31 - Act 1 - _Voyons, brigadier..._ - _Tra la la la..._.flac",
+      "artist": "Robert Lloyd, Plácido Domingo, Teresa Berganza, Richard Amner, London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers, John McCarthy",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - \"Voyons, brigadier...\" - \"Tra la la la...\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/18 - Teresa Berganza - Bizet- Carmen, WD 31 - Act 1 - Chanson et Duo- -Près des remparts de Séville-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/18 - Bizet_ Carmen, WD 31 - Act 1 - Chanson et Duo_ _Près des remparts de Séville_.flac",
+      "artist": "Teresa Berganza, Plácido Domingo, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - Chanson et Duo: \"Près des remparts de Séville\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/19 - Plácido Domingo - Bizet- Carmen, WD 31 - Act 1 - -Le lieutenant!... Prenez garde.-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/19 - Bizet_ Carmen, WD 31 - Act 1 - _Le lieutenant!... Prenez garde._.flac",
+      "artist": "Plácido Domingo, Robert Lloyd, Teresa Berganza, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 1 - \"Le lieutenant!... Prenez garde.\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/20 - London Symphony Orchestra - Bizet- Carmen, WD 31 - Entracte (between Act I & II).flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/20 - Bizet_ Carmen, WD 31 - Entracte (between Act I & II).flac",
+      "artist": "London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 - Entracte (between Act I & II)"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/21 - Teresa Berganza - Bizet- Carmen, WD 31 - Act 2 - -Les tringles des sistres tintaient-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/21 - Bizet_ Carmen, WD 31 - Act 2 - _Les tringles des sistres tintaient_.flac",
+      "artist": "Teresa Berganza, Alicia Nafé, Yvonne Kenny, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 2 - \"Les tringles des sistres tintaient\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/22 - Robert Lloyd - Bizet- Carmen, WD 31 - Act 2 - -Vous avez quelque chose à nous dire-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/22 - Bizet_ Carmen, WD 31 - Act 2 - _Vous avez quelque chose à nous dire_.flac",
+      "artist": "Robert Lloyd, George Main, Yvonne Kenny, Jean Lainé, Alicia Nafé, Teresa Berganza, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 2 - \"Vous avez quelque chose à nous dire\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/23 - Teresa Berganza - Bizet- Carmen, WD 31 - Act 2 - -Tout est bien alors- - -Vivat! vivat le toréro!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/23 - Bizet_ Carmen, WD 31 - Act 2 - _Tout est bien alors_ - _Vivat! vivat le toréro!_.flac",
+      "artist": "Teresa Berganza, Robert Lloyd, Alicia Nafé, Yvonne Kenny, Sherrill Milnes, Jean Lainé, George Main, London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers, John McCarthy",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 2 - \"Tout est bien alors\" - \"Vivat! vivat le toréro!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/24 - Sherrill Milnes - Bizet- Carmen, WD 31 - Act 2 - -Votre toast... je peux...- - -Toréador, en garde-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/24 - Bizet_ Carmen, WD 31 - Act 2 - _Votre toast... je peux..._ - _Toréador, en garde_.flac",
+      "artist": "Sherrill Milnes, George Main, Robert Lloyd, Teresa Berganza, Yvonne Kenny, Gordon Sandison, Geoffrey Pogson, Alicia Nafé, Jean Lainé, London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers, John McCarthy",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 2 - \"Votre toast... je peux...\" - \"Toréador, en garde\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/25 - Gordon Sandison - Bizet- Carmen, WD 31 - Act 2 - -Nous avons en tête une affaire!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/25 - Bizet_ Carmen, WD 31 - Act 2 - _Nous avons en tête une affaire!_.flac",
+      "artist": "Gordon Sandison, Yvonne Kenny, Alicia Nafé, Geoffrey Pogson, Teresa Berganza, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 2 - \"Nous avons en tête une affaire!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD1/26 - Gordon Sandison - Bizet- Carmen, WD 31 - Act 2 - -Amoureuse... ce n'est pas une raison- - -Halte-là! Qui va là--.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/26 - Bizet_ Carmen, WD 31 - Act 2 - _Amoureuse... ce n'est pas une raison_ - _Halte-là! Qui va là__.flac",
+      "artist": "Gordon Sandison, Geoffrey Pogson, Yvonne Kenny, Alicia Nafé, Teresa Berganza, Plácido Domingo, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 2 - \"Amoureuse... ce n'est pas une raison\" - \"Halte-là! Qui va là?\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/01 - Teresa Berganza - Bizet- Carmen, WD 31 - Act 2 - -Je vais danser en votre honneur-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/01 - Bizet_ Carmen, WD 31 - Act 2 - _Je vais danser en votre honneur_.flac",
+      "artist": "Teresa Berganza, Plácido Domingo, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 2 - \"Je vais danser en votre honneur\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/02 - Plácido Domingo - Bizet- Carmen, WD 31 - Act 2 - -La fleur que tu m'avais jetée-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/02 - Bizet_ Carmen, WD 31 - Act 2 - _La fleur que tu m'avais jetée_.flac",
+      "artist": "Plácido Domingo, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 2 - \"La fleur que tu m'avais jetée\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/03 - Teresa Berganza - Bizet- Carmen, WD 31 - Act 2 - -Non, tu ne m'aimes pas!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/03 - Bizet_ Carmen, WD 31 - Act 2 - _Non, tu ne m'aimes pas!_.flac",
+      "artist": "Teresa Berganza, Plácido Domingo, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 2 - \"Non, tu ne m'aimes pas!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/04 - Robert Lloyd - Bizet- Carmen, WD 31 - Act 2 - -Holà! Carmen! Holà!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/04 - Bizet_ Carmen, WD 31 - Act 2 - _Holà! Carmen! Holà!_.flac",
+      "artist": "Robert Lloyd, Plácido Domingo, Teresa Berganza, Gordon Sandison, Geoffrey Pogson, London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers, John McCarthy",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 2 - \"Holà! Carmen! Holà!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/05 - Yvonne Kenny - Bizet- Carmen, WD 31 - Act 2 - -Suis-nous à travers la campagne-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/05 - Bizet_ Carmen, WD 31 - Act 2 - _Suis-nous à travers la campagne_.flac",
+      "artist": "Yvonne Kenny, Alicia Nafé, Gordon Sandison, Geoffrey Pogson, London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers, John McCarthy",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 2 - \"Suis-nous à travers la campagne\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/06 - London Symphony Orchestra - Bizet- Carmen, WD 31 - Entracte (Between Act II & III).flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/06 - Bizet_ Carmen, WD 31 - Entracte (Between Act II & III).flac",
+      "artist": "London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 - Entracte (Between Act II & III)"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/07 - Yvonne Kenny - Bizet- Carmen, WD 31 - Act 3 - -Écoute, compagnon, écoute!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/07 - Bizet_ Carmen, WD 31 - Act 3 - _Écoute, compagnon, écoute!_.flac",
+      "artist": "Yvonne Kenny, Alicia Nafé, Teresa Berganza, Plácido Domingo, Gordon Sandison, Geoffrey Pogson, London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers, John McCarthy",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - \"Écoute, compagnon, écoute!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/08 - Gordon Sandison - Bizet- Carmen, WD 31 - Act 3 - -Halte! nous allons nous arrêter ici!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/08 - Bizet_ Carmen, WD 31 - Act 3 - _Halte! nous allons nous arrêter ici!_.flac",
+      "artist": "Gordon Sandison, Geoffrey Pogson, Plácido Domingo, Teresa Berganza, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - \"Halte! nous allons nous arrêter ici!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/09 - Yvonne Kenny - Bizet- Carmen, WD 31 - Act 3 - -Mêlons!---Mêlons!---Coupons!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/09 - Bizet_ Carmen, WD 31 - Act 3 - _Mêlons!_-_Mêlons!_-_Coupons!_.flac",
+      "artist": "Yvonne Kenny, Alicia Nafé, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - \"Mêlons!\"-\"Mêlons!\"-\"Coupons!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/10 - Teresa Berganza - Bizet- Carmen, WD 31 - Act 3 - -Carreau! Pique!... La mort!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/10 - Bizet_ Carmen, WD 31 - Act 3 - _Carreau! Pique!... La mort!_.flac",
+      "artist": "Teresa Berganza, Yvonne Kenny, Alicia Nafé, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - \"Carreau! Pique!... La mort!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/11 - Yvonne Kenny - Bizet- Carmen, WD 31 - Act 3 - -Parlez encore, parlez, mes belles-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/11 - Bizet_ Carmen, WD 31 - Act 3 - _Parlez encore, parlez, mes belles_.flac",
+      "artist": "Yvonne Kenny, Alicia Nafé, Teresa Berganza, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - \"Parlez encore, parlez, mes belles\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/12 - Gordon Sandison - Bizet- Carmen, WD 31 - Act 3 - -Eh! bien, j'avais raison.-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/12 - Bizet_ Carmen, WD 31 - Act 3 - _Eh! bien, j'avais raison._.flac",
+      "artist": "Gordon Sandison, Teresa Berganza, Geoffrey Pogson, Yvonne Kenny, Alicia Nafé, Plácido Domingo, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - \"Eh! bien, j'avais raison.\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/13 - Teresa Berganza - Bizet- Carmen, WD 31 - Act 3 - -Quant au douanier, c'est notre affaire!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/13 - Bizet_ Carmen, WD 31 - Act 3 - _Quant au douanier, c'est notre affaire!_.flac",
+      "artist": "Teresa Berganza, Alicia Nafé, Yvonne Kenny, Gordon Sandison, Geoffrey Pogson, London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers, John McCarthy",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - \"Quant au douanier, c'est notre affaire!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/14 - Jean Lainé - Bizet- Carmen, WD 31 - Act 3 - -Nous y sommes-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/14 - Bizet_ Carmen, WD 31 - Act 3 - _Nous y sommes_.flac",
+      "artist": "Jean Lainé, Ileana Cotrubas, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - \"Nous y sommes\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/15 - Ileana Cotrubas - Bizet- Carmen, WD 31 - Act 3 - -Je dis que rien ne m'épouvante-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/15 - Bizet_ Carmen, WD 31 - Act 3 - _Je dis que rien ne m'épouvante_.flac",
+      "artist": "Ileana Cotrubas, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - \"Je dis que rien ne m'épouvante\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/16 - Ileana Cotrubas - Bizet- Carmen, WD 31 - Act 3 - -Mais... je ne me trompe pas...- - -Je suis Escamillo, toréro de Grenade.-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/16 - Bizet_ Carmen, WD 31 - Act 3 - _Mais... je ne me trompe pas..._ - _Je suis Escamillo, toréro de Grenade._.flac",
+      "artist": "Ileana Cotrubas, Sherrill Milnes, Plácido Domingo, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - \"Mais... je ne me trompe pas...\" - \"Je suis Escamillo, toréro de Grenade.\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/17 - Teresa Berganza - Bizet- Carmen, WD 31 - Act 3 - -Holà, José!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/17 - Bizet_ Carmen, WD 31 - Act 3 - _Holà, José!_.flac",
+      "artist": "Teresa Berganza, Sherrill Milnes, Gordon Sandison, Plácido Domingo, London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers, John McCarthy",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - \"Holà, José!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/18 - Geoffrey Pogson - Bizet- Carmen, WD 31 - Act 3 - -Halte! quelqu'un est là qui cherche à se cacher.-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/18 - Bizet_ Carmen, WD 31 - Act 3 - _Halte! quelqu'un est là qui cherche à se cacher._.flac",
+      "artist": "Geoffrey Pogson, Teresa Berganza, Gordon Sandison, Plácido Domingo, Ileana Cotrubas, London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers, John McCarthy",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - \"Halte! quelqu'un est là qui cherche à se cacher.\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/19 - London Symphony Orchestra - Bizet- Carmen, WD 31 - Act 3 - Entr'acte.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/19 - Bizet_ Carmen, WD 31 - Act 3 - Entr'acte.flac",
+      "artist": "London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - Entr'acte"
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/20 - Richard Amner - Bizet- Carmen, WD 31 - Act 3 - Choeur- -A dos cuartos!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/20 - Bizet_ Carmen, WD 31 - Act 3 - Choeur_ _A dos cuartos!_.flac",
+      "artist": "Richard Amner, Jean Lainé, Leslie Fyson, London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers, John McCarthy",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - Choeur: \"A dos cuartos!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/21 - London Symphony Orchestra - Bizet- Carmen, WD 31 - Act 3 - -Les voici! voici le quadrille!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/21 - Bizet_ Carmen, WD 31 - Act 3 - _Les voici! voici le quadrille!_.flac",
+      "artist": "London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - \"Les voici! voici le quadrille!\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/22 - Sherrill Milnes - Bizet- Carmen, WD 31 - Act 3 - -Si tu m'aimes, Carmen-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/22 - Bizet_ Carmen, WD 31 - Act 3 - _Si tu m'aimes, Carmen_.flac",
+      "artist": "Sherrill Milnes, Teresa Berganza, Yvonne Kenny, Alicia Nafé, London Symphony Orchestra, Claudio Abbado",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - \"Si tu m'aimes, Carmen\""
+    },
+    {
+      "sourcePath": "/home/palpinter/Zenék/Opera/Bizet- Carmen [4403528] [1978]/CD2/23 - Teresa Berganza - Bizet- Carmen, WD 31 - Act 3 - -C'est toi!- -C'est-moi!-.flac",
+      "targetPath": "/tmp/test-reorganized/Classical/Berganza, Teresa/Opera/Bizet_ Carmen/23 - Bizet_ Carmen, WD 31 - Act 3 - _C'est toi!_ _C'est-moi!_.flac",
+      "artist": "Teresa Berganza, Plácido Domingo, London Symphony Orchestra, Claudio Abbado, The Ambrosian Singers",
+      "album": "Bizet: Carmen",
+      "title": "Bizet: Carmen, WD 31 / Act 3 - \"C'est toi!\" \"C'est-moi!\""
+    }
+  ],
+  "conflicts": []
+}
