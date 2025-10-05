@@ -9,7 +9,6 @@ import { mapGenre } from '../modern/genre-definitions';
 import logger from '../utils/logger';
 
 const MUSICBRAINZ_API_URL = 'https://musicbrainz.org/ws/2';
-const USER_AGENT = 'MusicOrganizer/0.1.0 (https://github.com/your-username/music-organizer)';
 
 /**
  * MusicBrainz API client with rate limiting
@@ -25,10 +24,16 @@ export class MusicBrainzClient {
       maxConcurrent: 1
     });
 
+    // Build User-Agent from environment or use defaults
+    const appName = process.env.MUSICBRAINZ_APP_NAME || 'MusicOrganizer';
+    const appVersion = process.env.MUSICBRAINZ_APP_VERSION || '0.1.0';
+    const contact = process.env.MUSICBRAINZ_CONTACT || 'https://github.com/your-username/music-organizer';
+    const userAgent = `${appName}/${appVersion} ( ${contact} )`;
+
     this.client = axios.create({
       baseURL: MUSICBRAINZ_API_URL,
       headers: {
-        'User-Agent': USER_AGENT,
+        'User-Agent': userAgent,
         'Accept': 'application/json'
       },
       timeout: 10000

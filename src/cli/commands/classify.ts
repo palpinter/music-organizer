@@ -26,11 +26,13 @@ export const classifyCommand = new Command('classify')
 
       // Parse stages
       const stagesArray = options.stages.split(',').map((s: string) => s.trim());
+      const useAllStages = stagesArray.includes('all');
+
       const stages = {
-        flacMetadata: stagesArray.includes('metadata'),
-        musicbrainz: stagesArray.includes('musicbrainz'),
-        discogs: stagesArray.includes('discogs'),
-        ai: stagesArray.includes('ai')
+        flacMetadata: useAllStages || stagesArray.includes('metadata'),
+        musicbrainz: useAllStages || stagesArray.includes('musicbrainz'),
+        discogs: useAllStages || stagesArray.includes('discogs'),
+        ai: useAllStages || stagesArray.includes('ai')
       };
 
       logger.info(`Enabled stages: ${stagesArray.join(', ')}`);

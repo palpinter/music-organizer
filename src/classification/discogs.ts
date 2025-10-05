@@ -192,7 +192,11 @@ let clientInstance: DiscogsClient | null = null;
  */
 export function getDiscogsClient(apiKey?: string, apiSecret?: string): DiscogsClient {
   if (!clientInstance) {
-    clientInstance = new DiscogsClient(apiKey, apiSecret);
+    // If no keys provided, try to get from environment
+    const key = apiKey || process.env.DISCOGS_API_KEY;
+    const secret = apiSecret || process.env.DISCOGS_API_SECRET;
+
+    clientInstance = new DiscogsClient(key, secret);
   }
   return clientInstance;
 }

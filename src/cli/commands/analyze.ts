@@ -119,6 +119,24 @@ export const analyzeCommand = new Command('analyze')
           });
       }
 
+      // Display corrupted files if any
+      if (scanResult.errors.length > 0) {
+        console.log('\n=== Corrupted/Invalid Files ===\n');
+        console.log(`Found ${scanResult.errors.length} problematic files:\n`);
+
+        scanResult.errors.slice(0, 10).forEach((err, idx) => {
+          console.log(`  ${idx + 1}. ${err.path}`);
+          console.log(`     Error: ${err.error}`);
+        });
+
+        if (scanResult.errors.length > 10) {
+          console.log(`\n  ... and ${scanResult.errors.length - 10} more errors`);
+          console.log(`  See full report for complete list.`);
+        }
+
+        console.log('\n💡 Tip: Remove or fix corrupted files, then re-run analysis');
+      }
+
       // Save report
       const outputPath = path.resolve(options.output);
       await fs.writeJson(outputPath, report, { spaces: 2 });

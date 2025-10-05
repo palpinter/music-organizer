@@ -1,12 +1,40 @@
 import { parseFile, IAudioMetadata } from 'music-metadata';
+import fs from 'fs-extra';
 import { FlacMetadata } from '../types';
 import logger from '../utils/logger';
+
+/**
+ * Validate FLAC file by checking magic bytes
+ */
+async function validateFlacFile(filePath: string): Promise<void> {
+  const buffer = Buffer.alloc(4);
+  const fd = await fs.open(filePath, 'r');
+
+  try {
+    await fs.read(fd, buffer, 0, 4, 0);
+    const magic = buffer.toString('ascii');
+
+    // FLAC files start with "fLaC" (0x664C6143)
+    if (magic !== 'fLaC') {
+      // Check if it's a JPEG (ff d8 ff)
+      if (buffer[0] === 0xff && buffer[1] === 0xd8 && buffer[2] === 0xff) {
+        throw new Error('File is actually a JPEG image, not FLAC');
+      }
+      throw new Error(`Invalid FLAC file format (magic bytes: ${buffer.toString('hex')})`);
+    }
+  } finally {
+    await fs.close(fd);
+  }
+}
 
 /**
  * Extract metadata from a FLAC file
  */
 export async function extractMetadata(filePath: string): Promise<FlacMetadata | null> {
   try {
+    // Validate file format first
+    await validateFlacFile(filePath);
+
     const metadata: IAudioMetadata = await parseFile(filePath);
 
     const common = metadata.common;
@@ -53,8 +81,21 @@ export async function extractMetadata(filePath: string): Promise<FlacMetadata | 
 
     return flacMetadata;
   } catch (error) {
-    logger.error(`Failed to extract metadata from ${filePath}:`, error);
-    return null;
+    // Detect corruption types and provide user-friendly messages
+    let errorMessage = error instanceof Error ? error.message : String(error);
+
+    if (errorMessage.includes('FourCC contains invalid characters')) {
+      errorMessage = 'Corrupted FLAC file (invalid format)';
+    } else if (errorMessage.includes('JPEG')) {
+      errorMessage = 'File is JPEG, not FLAC (rename or convert)';
+    } else if (errorMessage.includes('Invalid FLAC')) {
+      errorMessage = errorMessage; // Keep our custom message
+    }
+
+    logger.warn(`Skipping corrupted file: ${filePath} - ${errorMessage}`);
+
+    // Throw error so scanner can track it
+    throw new Error(errorMessage);
   }
 }
 
