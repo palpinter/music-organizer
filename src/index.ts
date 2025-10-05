@@ -12,6 +12,7 @@ import { analyzeCommand } from './cli/commands/analyze';
 import { classifyCommand } from './cli/commands/classify';
 import { planCommand } from './cli/commands/plan';
 import { organizeCommand } from './cli/commands/organize';
+import { updateTagsCommand } from './cli/commands/update-tags';
 
 const program = new Command();
 
@@ -25,6 +26,7 @@ program.addCommand(analyzeCommand);
 program.addCommand(classifyCommand);
 program.addCommand(planCommand);
 program.addCommand(organizeCommand);
+program.addCommand(updateTagsCommand);
 
 // TODO: Add more commands as they are implemented
 // program.addCommand(verifyCommand);

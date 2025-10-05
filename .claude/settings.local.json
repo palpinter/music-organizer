@@ -20,7 +20,16 @@
       "Read(//tmp/test-reorganized/**)",
       "Bash(SOURCE=\"/home/palpinter/Zenék/Alternative/Dead Can Dance/Into the Labyrinth (Remastered) [2205802] [1993]/01 - Dead Can Dance - Yulunga (Spirit Dance).flac\")",
       "Bash(TARGET=\"/tmp/test-reorganized/World & Folk/World/Dead Can Dance/1993 - Into the Labyrinth (Remastered)/01 - Yulunga (Spirit Dance).flac\")",
-      "Bash(md5sum:*)"
+      "Bash(md5sum:*)",
+      "Bash(npm config:*)",
+      "Bash(echo $PATH)",
+      "Bash(grep:*)",
+      "Bash(music-organizer:*)",
+      "Bash(~/.local/bin/music-organizer:*)",
+      "Bash(~/.local/lib/node_modules/music-organizer/dist/index.js --version)",
+      "Bash(hash -r)",
+      "Bash(ls:*)",
+      "Bash(metaflac:*)"
     ],
     "deny": [],
     "ask": []

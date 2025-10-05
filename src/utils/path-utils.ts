@@ -9,7 +9,9 @@
 export function sanitizeFilename(filename: string): string {
   return filename
     // Replace problematic characters with safe alternatives
-    .replace(/[<>:"|?*]/g, '_') // Windows forbidden chars
+    .replace(/:/g, ' -')         // Colon to dash with space
+    .replace(/["]/g, '')         // Remove quotes
+    .replace(/[<>|?*]/g, '_')    // Other Windows forbidden chars
     .replace(/\//g, '-')         // Path separator
     .replace(/\\/g, '-')         // Windows path separator
     .replace(/\x00/g, '')        // Null bytes
