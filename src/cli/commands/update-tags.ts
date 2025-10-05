@@ -5,6 +5,7 @@ import cliProgress from 'cli-progress';
 import { scanDirectory } from '../../core/scanner';
 import { extractMetadata } from '../../core/metadata';
 import { updateFlacTags } from '../../utils/tag-writer';
+import { detectWorkCategory } from '../../core/path-generator';
 import logger from '../../utils/logger';
 
 interface ClassificationResult {
@@ -115,7 +116,17 @@ export const updateTagsCommand = new Command('update-tags')
         stats.processed++;
 
         // Determine genre to write
-        const genreToWrite = classification.mainGenre;
+        let genreToWrite: string;
+
+        if (classification.mainGenre === 'Classical') {
+          // For Classical music, use the work category (Opera, Concertos, etc.)
+          // instead of composer name or generic "Classical"
+          const albumTitle = metadata.album || '';
+          genreToWrite = detectWorkCategory(albumTitle);
+        } else {
+          // For other genres, prefer subgenre over mainGenre for specificity
+          genreToWrite = classification.subgenre || classification.mainGenre;
+        }
 
         if (isDryRun) {
           logger.debug(`[DRY RUN] Would update ${filePath} with genre: ${genreToWrite}`);

@@ -29,7 +29,9 @@
       "Bash(~/.local/lib/node_modules/music-organizer/dist/index.js --version)",
       "Bash(hash -r)",
       "Bash(ls:*)",
-      "Bash(metaflac:*)"
+      "Bash(metaflac:*)",
+      "Bash(xargs metaflac:*)",
+      "Bash(xargs:*)"
     ],
     "deny": [],
     "ask": []

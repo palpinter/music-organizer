@@ -239,7 +239,7 @@ function extractComposerFromArtist(artist: string): string {
 /**
  * Detect work category from album/title
  */
-function detectWorkCategory(text: string): string {
+export function detectWorkCategory(text: string): string {
   const lower = text.toLowerCase();
 
   if (lower.includes('concerto')) return 'Concertos';
