@@ -35,6 +35,7 @@ export const organizeCommand = new Command('organize')
   .option('--no-verify', 'Skip file integrity verification (faster but risky)')
   .option('--backup <dir>', 'Create backup manifest in directory')
   .option('--dry-run', 'Simulate operations without actual file changes')
+  .option('--skip-existing', 'Skip files that already exist at target location')
   .action(async (planFile: string, options) => {
     try {
       logger.info(`Loading reorganization plan from: ${planFile}`);
@@ -48,10 +49,13 @@ export const organizeCommand = new Command('organize')
 
       const plan: ReorganizationPlan = await fs.readJson(planPath);
 
+      const skipExisting = options.skipExisting || false;
+
       // Validate plan
-      if (plan.summary.conflicts > 0) {
+      if (plan.summary.conflicts > 0 && !skipExisting) {
         logger.error(`Plan has ${plan.summary.conflicts} conflicts. Please resolve them first.`);
-        console.log('\nRun "plan" command again to regenerate conflict-free plan.\n');
+        console.log('\nRun "plan" command again to regenerate conflict-free plan.');
+        console.log('Or use --skip-existing to skip conflicting files.\n');
         process.exit(1);
       }
 
@@ -62,6 +66,7 @@ export const organizeCommand = new Command('organize')
       logger.info(`Mode: ${mode}`);
       logger.info(`Verify integrity: ${verifyIntegrity}`);
       logger.info(`Dry run: ${isDryRun}`);
+      logger.info(`Skip existing: ${skipExisting}`);
 
       // Calculate total size
       console.log('\nCalculating total size...');
@@ -128,13 +133,25 @@ export const organizeCommand = new Command('organize')
 
         if (isDryRun) {
           // Dry run - just log
-          logger.debug(`[DRY RUN] Would ${mode}: ${move.sourcePath} -> ${move.targetPath}`);
-          results.success++;
+          if (skipExisting && (await fs.pathExists(move.targetPath))) {
+            logger.debug(`[DRY RUN] Would skip (already exists): ${move.targetPath}`);
+            results.skipped++;
+          } else {
+            logger.debug(`[DRY RUN] Would ${mode}: ${move.sourcePath} -> ${move.targetPath}`);
+            results.success++;
+          }
           await new Promise(resolve => setTimeout(resolve, 10)); // Simulate work
         } else {
           // Check if source exists
           if (!(await fs.pathExists(move.sourcePath))) {
             logger.warn(`Source file not found: ${move.sourcePath}`);
+            results.skipped++;
+            continue;
+          }
+
+          // Check if target already exists and skip if requested
+          if (skipExisting && (await fs.pathExists(move.targetPath))) {
+            logger.debug(`Skipping (already exists): ${move.targetPath}`);
             results.skipped++;
             continue;
           }
