@@ -40,7 +40,8 @@ Genre Hierarchy:
 - Jazz & Blues: [Jazz, Blues, Bebop, Fusion]
 - World & Folk: [Folk, World, Singer-Songwriter, Country, Celtic]
 - Pop: (no subgenres)
-- Classical: (composer-based, not genre-based)
+- Classical: [Opera, Concertos, Symphonies, Chamber Music, Sonatas, Sacred Music, Keyboard Works, Orchestral Works, Other Works]
+  IMPORTANT: For Classical, use WORK CATEGORY as subgenre, NEVER use composer name as subgenre!
 - Soundtracks: (no subgenres)
 `.trim();
 
